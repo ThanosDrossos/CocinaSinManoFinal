@@ -48,4 +48,8 @@
         android:id="@+id/gallery_fragment"
         android:name="com.google.mediapipe.examples.gesturerecognizer.fragment.GalleryFragment"
         android:label="GalleryFragment" />
+    <fragment
+        android:id="@+id/recipeListFragment"
+        android:name="com.google.mediapipe.examples.gesturerecognizer.fragment.RecipeListFragment"
+        android:label="RecipeListFragment" />
 </navigation>

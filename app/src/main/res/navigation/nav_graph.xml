@@ -51,5 +51,29 @@
     <fragment
         android:id="@+id/recipeListFragment"
         android:name="com.google.mediapipe.examples.gesturerecognizer.fragment.RecipeListFragment"
-        android:label="RecipeListFragment" />
+        android:label="Recipe List">
+        <action
+            android:id="@+id/action_recipeListFragment_to_recipeDetailsFragment"
+            app:destination="@id/recipeDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left">
+            <argument
+                android:name="recipe"
+                app:argType="com.example.app.Recipe" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipeDetailsFragment"
+        android:name="com.google.mediapipe.examples.gesturerecognizer.fragment.RecipeDetailsFragment"
+        android:label="Recipe Details">
+        <argument
+            android:name="recipe"
+            app:argType="com.example.app.Recipe" />
+        <action
+            android:id="@+id/action_recipeDetailsFragment_to_recipeListFragment"
+            app:destination="@id/recipeListFragment"
+            app:popUpTo="@id/recipeListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

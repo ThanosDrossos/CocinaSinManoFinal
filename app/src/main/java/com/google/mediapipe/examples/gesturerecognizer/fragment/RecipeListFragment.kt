@@ -1,10 +1,17 @@
 package com.google.mediapipe.examples.gesturerecognizer.fragment
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import com.google.mediapipe.examples.gesturerecognizer.Recipe
+import com.google.mediapipe.examples.gesturerecognizer.RecipeAdapter
+import com.google.mediapipe.examples.gesturerecognizer.databinding.FragmentRecipeListBinding
 
 class RecipeListFragment : Fragment() {
 
@@ -32,4 +39,12 @@ class RecipeListFragment : Fragment() {
         }
         binding.recipeRecyclerView.adapter = recipeAdapter
     }
+
+    private fun loadRecipesFromJson(context: Context): List<Recipe> {
+        val jsonString = context.assets.open("recipes.json").bufferedReader().use { it.readText() }
+        val gson = Gson()
+        val recipeType = object : TypeToken<List<Recipe>>() {}.type
+        return gson.fromJson(jsonString, recipeType)
+    }
+
 }

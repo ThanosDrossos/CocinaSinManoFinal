@@ -159,7 +159,7 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
         val gestureResults = resultBundle.results.firstOrNull()
         val gestureClassifierResult = gestureResults?.gestures()?.firstOrNull()
         val category = gestureClassifierResult?.firstOrNull() as com.google.mediapipe.tasks.components.containers.Category
-        val gestureName = category?.categoryName()
+        val gestureName = category.categoryName()
 
         Log.d(TAG, "Recognized gesture: $gestureName")
 
@@ -179,7 +179,7 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
                 }
                 "Closed_Fist" -> {
                     // quit
-                    val action = RecipeDetailsFragmentDirections.actionRecipeDetailsFragmentToRecipeListFragment()
+                    // val action = RecipeDetailsFragmentDirections.actionRecipeDetailsFragmentToRecipeListFragment()
                     findNavController().navigateUp()
                 }
             }

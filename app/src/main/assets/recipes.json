@@ -1,0 +1,178 @@
+[
+    {
+        "title": "Tortilla Española",
+        "ingredients": [
+            "Huevos",
+            "Patatas",
+            "Cebolla",
+            "Aceite de oliva",
+            "Sal"
+        ],
+        "steps": [
+            {
+                "description": "Pela y corta las patatas y la cebolla en rodajas finas.",
+                "imagePath": "images/tortilla_step1.jpg"
+            },
+            {
+                "description": "Fríe las patatas y la cebolla en abundante aceite hasta que estén tiernas.",
+                "imagePath": "images/tortilla_step2.jpg"
+            },
+            {
+                "description": "Bate los huevos en un bol y añade una pizca de sal.",
+                "imagePath": "images/tortilla_step3.jpg"
+            },
+            {
+                "description": "Escurre las patatas y la cebolla; mézclalas con los huevos batidos.",
+                "imagePath": "images/tortilla_step4.jpg"
+            },
+            {
+                "description": "Vierte la mezcla en una sartén y cocina a fuego medio por ambos lados hasta que cuaje.",
+                "imagePath": "images/tortilla_step5.jpg"
+            }
+        ],
+        "imagePath": "images/tortilla_espanola.jpg"
+    },
+    {
+        "title": "Paella Valenciana",
+        "ingredients": [
+            "Arroz",
+            "Pollo",
+            "Conejo",
+            "Judías verdes",
+            "Garrofó",
+            "Tomate",
+            "Aceite de oliva",
+            "Azafrán",
+            "Agua",
+            "Sal"
+        ],
+        "steps": [
+            {
+                "description": "Calienta aceite en la paellera y dora el pollo y el conejo troceados.",
+                "imagePath": "images/paella_step1.jpg"
+            },
+            {
+                "description": "Añade las judías verdes y el garrofó; sofríe durante unos minutos.",
+                "imagePath": "images/paella_step2.jpg"
+            },
+            {
+                "description": "Incorpora el tomate rallado y cocina hasta que reduzca.",
+                "imagePath": "images/paella_step3.jpg"
+            },
+            {
+                "description": "Agrega agua, azafrán y sal; deja hervir durante 20 minutos.",
+                "imagePath": "images/paella_step4.jpg"
+            },
+            {
+                "description": "Añade el arroz de forma uniforme y cocina hasta que esté en su punto.",
+                "imagePath": "images/paella_step5.jpg"
+            }
+        ],
+        "imagePath": "images/paella_valenciana.jpg"
+    },
+    {
+        "title": "Gazpacho Andaluz",
+        "ingredients": [
+            "Tomates maduros",
+            "Pepino",
+            "Pimiento verde",
+            "Ajo",
+            "Pan duro",
+            "Aceite de oliva",
+            "Vinagre de vino",
+            "Sal",
+            "Agua fría"
+        ],
+        "steps": [
+            {
+                "description": "Lava y corta los tomates, el pepino y el pimiento en trozos grandes.",
+                "imagePath": "images/gazpacho_step1.jpg"
+            },
+            {
+                "description": "Remoja el pan en agua para ablandarlo.",
+                "imagePath": "images/gazpacho_step2.jpg"
+            },
+            {
+                "description": "Coloca todos los ingredientes en la batidora, incluyendo el ajo, el aceite, el vinagre y la sal.",
+                "imagePath": "images/gazpacho_step3.jpg"
+            },
+            {
+                "description": "Bate hasta obtener una mezcla homogénea; ajusta de sal y vinagre si es necesario.",
+                "imagePath": "images/gazpacho_step4.jpg"
+            },
+            {
+                "description": "Refrigera durante al menos una hora antes de servir bien frío.",
+                "imagePath": "images/gazpacho_step5.jpg"
+            }
+        ],
+        "imagePath": "images/gazpacho_andaluz.jpg"
+    },
+    {
+        "title": "Churros con Chocolate",
+        "ingredients": [
+            "Harina de trigo",
+            "Agua",
+            "Sal",
+            "Aceite para freír",
+            "Azúcar",
+            "Chocolate negro",
+            "Leche"
+        ],
+        "steps": [
+            {
+                "description": "Hierve agua con una pizca de sal; añade la harina y mezcla hasta formar una masa.",
+                "imagePath": "images/churros_step1.jpg"
+            },
+            {
+                "description": "Coloca la masa en una churrera o manga pastelera con boquilla estriada.",
+                "imagePath": "images/churros_step2.jpg"
+            },
+            {
+                "description": "Calienta aceite en una sartén y fríe los churros hasta que estén dorados.",
+                "imagePath": "images/churros_step3.jpg"
+            },
+            {
+                "description": "Espolvorea los churros con azúcar al gusto.",
+                "imagePath": "images/churros_step4.jpg"
+            },
+            {
+                "description": "Para el chocolate, derrite el chocolate negro en leche caliente hasta obtener una mezcla espesa.",
+                "imagePath": "images/chocolate_step5.jpg"
+            }
+        ],
+        "imagePath": "images/churros_con_chocolate.jpg"
+    },
+    {
+        "title": "Ensalada Mixta",
+        "ingredients": [
+            "Lechuga",
+            "Tomate",
+            "Cebolla",
+            "Atún",
+            "Huevo duro",
+            "Aceitunas",
+            "Aceite de oliva",
+            "Vinagre",
+            "Sal"
+        ],
+        "steps": [
+            {
+                "description": "Lava y corta la lechuga, el tomate y la cebolla en trozos o rodajas.",
+                "imagePath": "images/ensalada_step1.jpg"
+            },
+            {
+                "description": "Coloca las verduras en una ensaladera.",
+                "imagePath": "images/ensalada_step2.jpg"
+            },
+            {
+                "description": "Añade el atún desmenuzado, las aceitunas y el huevo duro cortado en cuartos.",
+                "imagePath": "images/ensalada_step3.jpg"
+            },
+            {
+                "description": "Aliña con aceite de oliva, vinagre y sal al gusto; mezcla bien antes de servir.",
+                "imagePath": "images/ensalada_step4.jpg"
+            }
+        ],
+        "imagePath": "images/ensalada_mixta.jpg"
+    }
+]

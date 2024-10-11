@@ -20,9 +20,8 @@ plugins {
     id 'de.undercouch.download'
     id 'kotlin-android'
     id 'kotlin-parcelize'
+    id 'androidx.navigation.safeargs.kotlin'
 }
-
-apply plugin: "androidx.navigation.safeargs.kotlin"
 
 android {
     namespace 'com.google.mediapipe.examples.gesturerecognizer'
@@ -104,7 +103,6 @@ dependencies {
 
     // Mediapipe Library
     implementation 'com.google.mediapipe:tasks-vision:0.10.14'
-    implementation 'com.google.mediapipe:mediapipe-framework:0.10.0'
 
     //JSON
     implementation 'com.google.code.gson:gson:2.8.9'

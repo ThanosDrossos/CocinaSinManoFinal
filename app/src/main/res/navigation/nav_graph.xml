@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-    Updated Navigation Graph to include Recipe elements with correct argument types.
--->
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/permissions_fragment">
+    app:startDestination="@id/recipeListFragment">
 
     <!-- Permissions Fragment -->
     <fragment
@@ -13,31 +11,13 @@
         android:name="com.google.mediapipe.examples.gesturerecognizer.fragment.PermissionsFragment"
         android:label="PermissionsFragment">
 
+        <!-- Action to navigate to Camera Fragment -->
         <action
             android:id="@+id/action_permissions_to_camera"
-            app:destination="@id/camera_fragment"
+            app:destination="@id/recipeListFragment"
             app:popUpTo="@id/permissions_fragment"
             app:popUpToInclusive="true" />
     </fragment>
-
-    <!-- Camera Fragment -->
-    <fragment
-        android:id="@+id/camera_fragment"
-        android:name="com.google.mediapipe.examples.gesturerecognizer.fragment.CameraFragment"
-        android:label="CameraFragment">
-
-        <action
-            android:id="@+id/action_camera_to_permissions"
-            app:destination="@id/permissions_fragment"
-            app:popUpTo="@id/camera_fragment"
-            app:popUpToInclusive="true" />
-    </fragment>
-
-    <!-- Gallery Fragment -->
-    <fragment
-        android:id="@+id/gallery_fragment"
-        android:name="com.google.mediapipe.examples.gesturerecognizer.fragment.GalleryFragment"
-        android:label="GalleryFragment" />
 
     <!-- Recipe List Fragment -->
     <fragment
@@ -45,13 +25,12 @@
         android:name="com.google.mediapipe.examples.gesturerecognizer.fragment.RecipeListFragment"
         android:label="Recipe List">
 
+        <!-- Action to navigate to Recipe Details -->
         <action
             android:id="@+id/action_recipeListFragment_to_recipeDetailsFragment"
             app:destination="@id/recipeDetailsFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left">
-
-            <!-- Corrected Argument Type -->
             <argument
                 android:name="recipe"
                 app:argType="com.google.mediapipe.examples.gesturerecognizer.Recipe" />
@@ -63,15 +42,17 @@
         android:id="@+id/recipeDetailsFragment"
         android:name="com.google.mediapipe.examples.gesturerecognizer.fragment.RecipeDetailsFragment"
         android:label="Recipe Details">
-
         <argument
             android:name="recipe"
             app:argType="com.google.mediapipe.examples.gesturerecognizer.Recipe" />
-
+        <!-- Action to return to Recipe List -->
         <action
             android:id="@+id/action_recipeDetailsFragment_to_recipeListFragment"
             app:destination="@id/recipeListFragment"
             app:popUpTo="@id/recipeListFragment"
-            app:popUpToInclusive="true" />
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
     </fragment>
+
 </navigation>

@@ -45,6 +45,8 @@
     <string name="label_hand_presence_confidence_threshold">Presence
         Threshold</string>
     <string name="label_delegate">Delegate</string>
+    <string name="step_image">step image</string>
+    <string name="recipe_image">recipe image</string>
 
     <string-array name="delegate_spinner_titles">
         <item>CPU</item>

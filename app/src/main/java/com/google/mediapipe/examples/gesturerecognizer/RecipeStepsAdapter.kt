@@ -1,13 +1,12 @@
 package com.google.mediapipe.examples.gesturerecognizer
 
-import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import java.io.IOException
+import com.bumptech.glide.Glide
 
 class RecipeStepsAdapter(private val steps: List<Step>) :
     RecyclerView.Adapter<RecipeStepsAdapter.RecipeStepViewHolder>() {
@@ -28,15 +27,10 @@ class RecipeStepsAdapter(private val steps: List<Step>) :
         holder.descriptionTextView.text = step.description
 
         // Load image from assets or drawable
-        val context = holder.itemView.context
-        try {
-            val inputStream = context.assets.open(step.imagePath)
-            val drawable = Drawable.createFromStream(inputStream, null)
-            holder.stepImageView.setImageDrawable(drawable)
-        } catch (e: IOException) {
-            // Handle exception or set a placeholder image
-            holder.stepImageView.setImageResource(R.drawable.placeholder_image)
-        }
+        // Load image from assets using Glide
+        Glide.with(holder.itemView.context)
+            .load("file:///android_asset/${step.imagePath}")
+            .into(holder.stepImageView)
     }
 
     override fun getItemCount(): Int = steps.size

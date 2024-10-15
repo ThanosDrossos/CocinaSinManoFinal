@@ -156,8 +156,8 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
 
     override fun onResults(resultBundle: GestureRecognizerHelper.ResultBundle) {
 
-        val gestureResults = resultBundle.results.firstOrNull()
-        val gestureClassifierResult = gestureResults?.gestures()?.firstOrNull()
+        val gestureResults = resultBundle.results.firstOrNull() ?: return
+        val gestureClassifierResult = gestureResults?.gestures()?.firstOrNull() ?: return
         val category = gestureClassifierResult?.firstOrNull() as com.google.mediapipe.tasks.components.containers.Category
         val gestureName = category.categoryName()
 

@@ -25,12 +25,12 @@ plugins {
 
 android {
     namespace 'com.google.mediapipe.examples.gesturerecognizer'
-    compileSdk 32
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.google.mediapipe.examples.gesturerecognizer"
         minSdk 24
-        targetSdk 32
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -107,5 +107,6 @@ dependencies {
     //JSON
     implementation 'com.google.code.gson:gson:2.8.9'
 
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
 
 }

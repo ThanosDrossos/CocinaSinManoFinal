@@ -18,7 +18,7 @@
         <ImageView
             android:id="@+id/recipeImageView"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="20dp"
             android:scaleType="centerCrop"
             android:contentDescription="@string/recipe_image" />
 
@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Recipe Name"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginTop="8dp" />
 

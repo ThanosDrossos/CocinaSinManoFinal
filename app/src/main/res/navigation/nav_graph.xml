@@ -11,12 +11,10 @@
         android:name="com.google.mediapipe.examples.gesturerecognizer.fragment.PermissionsFragment"
         android:label="PermissionsFragment">
 
-        <!-- Action to navigate to Camera Fragment -->
+        <!-- Action to navigate to Recipe List Fragment -->
         <action
-            android:id="@+id/action_permissions_to_camera"
-            app:destination="@id/recipeListFragment"
-            app:popUpTo="@id/permissions_fragment"
-            app:popUpToInclusive="true" />
+            android:id="@+id/action_permissions_to_recipeListFragment"
+            app:destination="@id/recipeListFragment" />
     </fragment>
 
     <!-- Recipe List Fragment -->
@@ -25,16 +23,38 @@
         android:name="com.google.mediapipe.examples.gesturerecognizer.fragment.RecipeListFragment"
         android:label="Recipe List">
 
-        <!-- Action to navigate to Recipe Details -->
+        <!-- Action to navigate to Recipe Overview -->
         <action
-            android:id="@+id/action_recipeListFragment_to_recipeDetailsFragment"
-            app:destination="@id/recipeDetailsFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left">
+            android:id="@+id/action_recipeListFragment_to_recipeOverviewFragment"
+            app:destination="@id/recipeOverviewFragment">
             <argument
                 android:name="recipe"
                 app:argType="com.google.mediapipe.examples.gesturerecognizer.Recipe" />
         </action>
+    </fragment>
+
+    <!-- Recipe Overview Fragment -->
+    <fragment
+        android:id="@+id/recipeOverviewFragment"
+        android:name="com.google.mediapipe.examples.gesturerecognizer.fragment.RecipeOverviewFragment"
+        android:label="Recipe Overview">
+        <argument
+            android:name="recipe"
+            app:argType="com.google.mediapipe.examples.gesturerecognizer.Recipe" />
+
+        <!-- Action to navigate to Recipe Details -->
+        <action
+            android:id="@+id/action_recipeOverviewFragment_to_recipeDetailsFragment"
+            app:destination="@id/recipeDetailsFragment">
+            <argument
+                android:name="recipe"
+                app:argType="com.google.mediapipe.examples.gesturerecognizer.Recipe" />
+        </action>
+
+        <!-- Action to navigate back to Recipe List Fragment -->
+        <action
+            android:id="@+id/action_recipeOverviewFragment_to_recipeListFragment"
+            app:destination="@id/recipeListFragment" />
     </fragment>
 
     <!-- Recipe Details Fragment -->
@@ -45,14 +65,6 @@
         <argument
             android:name="recipe"
             app:argType="com.google.mediapipe.examples.gesturerecognizer.Recipe" />
-        <!-- Action to return to Recipe List -->
-        <action
-            android:id="@+id/action_recipeDetailsFragment_to_recipeListFragment"
-            app:destination="@id/recipeListFragment"
-            app:popUpTo="@id/recipeListFragment"
-            app:popUpToInclusive="true"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left" />
     </fragment>
 
 </navigation>

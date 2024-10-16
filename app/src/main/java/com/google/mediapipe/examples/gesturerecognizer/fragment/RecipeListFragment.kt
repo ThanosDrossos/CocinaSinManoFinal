@@ -39,7 +39,7 @@ class RecipeListFragment : Fragment() {
         val recipeAdapter = RecipeAdapter(recipes) { recipe ->
             // Navigate to RecipeDetailsFragment with the selected recipe
             val action =
-                RecipeListFragmentDirections.actionRecipeListFragmentToRecipeDetailsFragment(recipe)
+                RecipeListFragmentDirections.actionRecipeListFragmentToRecipeOverviewFragment(recipe)
             findNavController().navigate(action)
         }
 

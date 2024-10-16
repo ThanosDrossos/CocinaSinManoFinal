@@ -8,32 +8,32 @@
     app:cardElevation="4dp"
     app:cardCornerRadius="8dp">
 
+    <!-- Horizontal LinearLayout to hold TextView and ImageView -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:padding="16dp">
 
-        <!-- Recipe Image -->
-        <ImageView
-            android:id="@+id/recipeImageView"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:scaleType="centerCrop"
-            android:contentDescription="@string/recipe_image" />
-
-        <!-- Recipe Name -->
+        <!-- TextView for Recipe Name -->
         <TextView
             android:id="@+id/recipeNameTextView"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Recipe Name"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_marginTop="8dp" />
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingEnd="8dp" />
 
-        <!-- Recipe Description or Ingredients (Optional) -->
-        <!-- Add additional TextViews if needed -->
+        <!-- ImageView for Recipe Image -->
+        <ImageView
+            android:id="@+id/recipeImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/recipe_image" />
 
     </LinearLayout>
 

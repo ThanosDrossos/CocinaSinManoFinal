@@ -31,6 +31,10 @@
                 android:name="recipe"
                 app:argType="com.google.mediapipe.examples.gesturerecognizer.Recipe" />
         </action>
+
+        <action
+            android:id="@+id/action_recipeListFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
     </fragment>
 
     <!-- Recipe Overview Fragment -->
@@ -67,4 +71,8 @@
             app:argType="com.google.mediapipe.examples.gesturerecognizer.Recipe" />
     </fragment>
 
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.google.mediapipe.examples.gesturerecognizer.fragment.AboutFragment"
+        android:label="Acerca de" />
 </navigation>

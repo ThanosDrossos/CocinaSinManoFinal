@@ -17,7 +17,7 @@
             android:id="@+id/backButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Back"
+            android:text="Atras"
             android:layout_gravity="start"
             android:layout_marginBottom="16dp" />
 
@@ -26,7 +26,7 @@
             android:id="@+id/recipeTitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Recipe Title"
+            android:text="Titulo de la receta"
             android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginBottom="16dp" />
@@ -36,7 +36,7 @@
             android:id="@+id/ingredientsLabelTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ingredients"
+            android:text="Ingredientes"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
@@ -46,7 +46,7 @@
             android:id="@+id/ingredientsTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="List of ingredients"
+            android:text="Lista de ingredientes"
             android:layout_marginBottom="16dp" />
 
         <!-- Steps Label -->
@@ -54,7 +54,7 @@
             android:id="@+id/stepsLabelTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Steps"
+            android:text="Pasos"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginBottom="8dp" />
@@ -64,7 +64,7 @@
             android:id="@+id/stepsTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="List of steps"
+            android:text="Lista de pasos"
             android:layout_marginBottom="16dp" />
 
         <!-- Start Cooking Button -->

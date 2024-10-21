@@ -18,10 +18,10 @@
     <item
         android:id="@id/recipeListFragment"
         android:icon="@drawable/ic_baseline_photo_camera_24"
-        android:title="ReceipeList" />
+        android:title="Lista de Recetas" />
 
     <item
-        android:id="@id/recipeDetailsFragment"
+        android:id="@id/aboutFragment"
         android:icon="@drawable/ic_baseline_photo_library_24"
-        android:title="RecipeDetails" />
+        android:title="Ajustes" />
 </menu>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/about_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/about_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- App Version -->
+        <TextView
+            android:id="@+id/appVersionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Versión de la Aplicación: 1.0.0"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Developer Information -->
+        <TextView
+            android:id="@+id/developerInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desarrollado por Tu Nombre o Empresa"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Privacy Policy -->
+        <TextView
+            android:id="@+id/privacyPolicyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Política de Privacidad"
+            android:textSize="18sp"
+            android:textColor="@color/teal_200"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <!-- Additional Information -->
+        <TextView
+            android:id="@+id/additionalInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Información adicional sobre la aplicación."
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>

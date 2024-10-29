@@ -31,6 +31,11 @@ import com.google.mediapipe.tasks.core.Delegate
 import com.google.mediapipe.tasks.vision.core.RunningMode
 import com.google.mediapipe.tasks.vision.gesturerecognizer.GestureRecognizer
 import com.google.mediapipe.tasks.vision.gesturerecognizer.GestureRecognizerResult
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class GestureRecognizerHelper(
     var minHandDetectionConfidence: Float = DEFAULT_HAND_DETECTION_CONFIDENCE,
@@ -46,11 +51,17 @@ class GestureRecognizerHelper(
     // will not change, a lazy val would be preferable.
     private var gestureRecognizer: GestureRecognizer? = null
 
+    public var recognitionJob: Job? = null
+
     init {
         setupGestureRecognizer()
     }
 
+    private var isHelperActive = true
+
     fun clearGestureRecognizer() {
+        isHelperActive = false
+        recognitionJob?.cancel()
         gestureRecognizer?.close()
         gestureRecognizer = null
     }
@@ -118,44 +129,58 @@ class GestureRecognizerHelper(
         imageProxy: ImageProxy,
     ) {
         val frameTime = SystemClock.uptimeMillis()
-
-        // Copy out RGB bits from the frame to a bitmap buffer
-        val bitmapBuffer = Bitmap.createBitmap(
-            imageProxy.width, imageProxy.height, Bitmap.Config.ARGB_8888
-        )
-        imageProxy.use { bitmapBuffer.copyPixelsFromBuffer(imageProxy.planes[0].buffer) }
-        imageProxy.close()
-
-        val matrix = Matrix().apply {
-            // Rotate the frame received from the camera to be in the same direction as it'll be shown
-            postRotate(imageProxy.imageInfo.rotationDegrees.toFloat())
-
-            // flip image since we only support front camera
-            postScale(
-                -1f, 1f, imageProxy.width.toFloat(), imageProxy.height.toFloat()
+        try {
+            // Copy out RGB bits from the frame to a bitmap buffer
+            val bitmapBuffer = Bitmap.createBitmap(
+                imageProxy.width, imageProxy.height, Bitmap.Config.ARGB_8888
             )
+            imageProxy.use { bitmapBuffer.copyPixelsFromBuffer(imageProxy.planes[0].buffer) }
+
+            val matrix = Matrix().apply {
+                // Rotate the frame received from the camera to be in the same direction as it'll be shown
+                postRotate(imageProxy.imageInfo.rotationDegrees.toFloat())
+
+                // flip image since we only support front camera
+                postScale(
+                    -1f, 1f, imageProxy.width.toFloat(), imageProxy.height.toFloat()
+                )
+            }
+
+            // Rotate bitmap to match what our model expects
+            val rotatedBitmap = Bitmap.createBitmap(
+                bitmapBuffer,
+                0,
+                0,
+                bitmapBuffer.width,
+                bitmapBuffer.height,
+                matrix,
+                true
+            )
+
+            // Convert the input Bitmap object to an MPImage object to run inference
+            val mpImage = BitmapImageBuilder(rotatedBitmap).build()
+
+            recognitionJob = CoroutineScope(Dispatchers.Default).launch{
+                recognizeAsync(mpImage, frameTime)
+                withContext(Dispatchers.Main){
+                    imageProxy.close()
+                }
+            }
+
+        } catch(e: Exception) {
+            Log.e(TAG, "Error running inference ${e.message}")
+        } finally {
+            imageProxy.close()
         }
 
-        // Rotate bitmap to match what our model expects
-        val rotatedBitmap = Bitmap.createBitmap(
-            bitmapBuffer,
-            0,
-            0,
-            bitmapBuffer.width,
-            bitmapBuffer.height,
-            matrix,
-            true
-        )
-
-        // Convert the input Bitmap object to an MPImage object to run inference
-        val mpImage = BitmapImageBuilder(rotatedBitmap).build()
-
-        recognizeAsync(mpImage, frameTime)
     }
 
     // Run hand gesture recognition using MediaPipe Gesture Recognition API
     @VisibleForTesting
     fun recognizeAsync(mpImage: MPImage, frameTime: Long) {
+        if (!isHelperActive) {
+            return
+        }
         // As we're using running mode LIVE_STREAM, the recognition result will
         // be returned in returnLivestreamResult function
         gestureRecognizer?.recognizeAsync(mpImage, frameTime)
@@ -340,6 +365,7 @@ class GestureRecognizerHelper(
     )
 
     interface GestureRecognizerListener {
+
         fun onError(error: String, errorCode: Int = OTHER_ERROR)
         fun onResults(resultBundle: ResultBundle)
     }

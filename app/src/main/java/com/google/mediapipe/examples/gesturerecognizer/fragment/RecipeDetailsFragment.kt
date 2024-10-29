@@ -33,7 +33,8 @@ import java.util.concurrent.Executors
 
 class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecognizerListener {
 
-    private lateinit var binding: FragmentRecipeDetailsBinding
+    private var _binding: FragmentRecipeDetailsBinding? = null
+    private val binding get() = _binding!!
     private lateinit var recipe: Recipe
     private lateinit var gestureRecognizerHelper: GestureRecognizerHelper
 
@@ -43,6 +44,8 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
 
     private var currentStepIndex = 0
 
+    private var isFragmentActive = false
+
     // Gesture recognition variables
     private var isGestureRecognitionInProgress = false
     private var gestureCountsFirstInterval = mutableMapOf<String, Int>()
@@ -51,6 +54,8 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
     private val GESTURE_RECOGNITION_INTERVAL = 3000L // Changed from 5000L to 3000L
     private var startTime: Long = 0L
     private var gestureRecognitionHandler: Handler? = null
+
+    private val cooldownDuration = 1000L // 1 second in milliseconds
 
     companion object {
         private const val TAG = "RecipeDetailsFragment"
@@ -70,7 +75,7 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        binding = FragmentRecipeDetailsBinding.inflate(inflater, container, false)
+        _binding = FragmentRecipeDetailsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -95,6 +100,8 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
 
         // Initialize the gesture recognition handler
         gestureRecognitionHandler = Handler(Looper.getMainLooper())
+
+        isFragmentActive = true
 
         // Check for camera permission and start camera preview
         if (ContextCompat.checkSelfPermission(
@@ -235,11 +242,16 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
 
     override fun onDestroyView() {
         super.onDestroyView()
+        isFragmentActive = false
         // Shut down our background executor
-        cameraExecutor.shutdown()
+        cameraProvider?.unbindAll()
+        cameraExecutor.shutdownNow()
         gestureRecognizerHelper.clearGestureRecognizer()
         gestureRecognitionHandler?.removeCallbacksAndMessages(null)
         gestureRecognitionHandler = null
+        imageAnalyzer?.clearAnalyzer()
+        imageAnalyzer = null
+        _binding = null
     }
 
     override fun onError(error: String, errorCode: Int) {
@@ -253,6 +265,7 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
     }
 
     override fun onResults(resultBundle: GestureRecognizerHelper.ResultBundle) {
+        if (!isFragmentActive) return
         val gestureResults = resultBundle.results.firstOrNull()
         val gestureClassifierResult = gestureResults?.gestures()?.firstOrNull()
         val category = gestureClassifierResult?.firstOrNull()
@@ -261,6 +274,10 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
         Log.d(TAG, "Gesto Reconocido: $gestureName")
 
         activity?.runOnUiThread {
+            if(_binding==null){
+                Log.d(TAG, "Binding is null")
+                return@runOnUiThread
+            }
             // Update the UI with the detected gesture
             binding.detectedGestureTextView.text = "Gesto detectado: $gestureName"
 
@@ -378,7 +395,8 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
                 }
                 "Closed_Fist" -> {
                     // Navigate back to recipe overview fragment
-                    findNavController().navigateUp()
+                    val action = RecipeDetailsFragmentDirections.actionRecipeDetailsFragmentToRecipeOverviewFragment(recipe)
+                    findNavController().navigate(action)
                 }
                 else -> {
                     Toast.makeText(

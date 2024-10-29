@@ -25,7 +25,7 @@
             android:id="@+id/developerInfoTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Desarrollado por Tu Nombre o Empresa"
+            android:text="Desarrollado por Thanos Drossos"
             android:textSize="18sp"
             android:layout_marginBottom="8dp" />
 

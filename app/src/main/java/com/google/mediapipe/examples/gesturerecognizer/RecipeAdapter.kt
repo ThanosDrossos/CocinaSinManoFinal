@@ -1,11 +1,13 @@
 package com.google.mediapipe.examples.gesturerecognizer
 
+import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
@@ -19,6 +21,15 @@ class RecipeAdapter(
         val recipeImageView: ImageView = itemView.findViewById(R.id.recipeImageView)
     }
 
+    private var selectedPosition = RecyclerView.NO_POSITION
+
+    fun setSelectedPosition(position: Int) {
+        val previousPosition = selectedPosition
+        selectedPosition = position
+        notifyItemChanged(previousPosition)
+        notifyItemChanged(selectedPosition)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecipeViewHolder {
         val itemView = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_recipe, parent, false)
@@ -30,6 +41,13 @@ class RecipeAdapter(
         holder.recipeNameTextView.text = recipe.title
 
         Log.d("RecipeAdapter", "Binding recipe at position $position: ${recipe.title}")
+
+        // Highlight selected item
+        if (position == selectedPosition) {
+            holder.itemView.setBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.selected_item))
+        } else {
+            holder.itemView.setBackgroundColor(Color.TRANSPARENT)
+        }
 
         // Load image from assets using Glide
         Glide.with(holder.itemView.context)

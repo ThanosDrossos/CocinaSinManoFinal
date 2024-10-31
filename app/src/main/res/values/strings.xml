@@ -15,7 +15,7 @@
     ~ limitations under the License.
 -->
 <resources>
-    <string name="app_name">Cocina Sin Manos</string>
+    <string name="app_name">Recetas Sin Toque</string>
 
     <string name="media_pipe">MediaPipe</string>
 

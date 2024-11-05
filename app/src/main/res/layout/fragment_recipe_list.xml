@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="5dp"
             app:layout_constraintTop_toBottomOf="@id/gestureProgressBar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -83,10 +83,11 @@
                 android:id="@+id/userGuidanceTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gestos:"
+                android:text="Gestos"
                 android:textStyle="bold"
                 android:textSize="20sp"
-                android:layout_marginBottom="4dp" />
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="1dp" />
 
             <TextView
                 android:id="@+id/gestureInstructionsTextView"

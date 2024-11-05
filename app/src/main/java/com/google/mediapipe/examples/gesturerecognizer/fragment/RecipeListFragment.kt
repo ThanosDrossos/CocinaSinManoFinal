@@ -14,6 +14,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.camera.core.AspectRatio
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageAnalysis
@@ -55,7 +56,24 @@ class RecipeListFragment : Fragment(), GestureRecognizerHelper.GestureRecognizer
     private val gestureTimestamps = mutableListOf<Pair<Long, String>>()
     private val GESTURE_RECOGNITION_INTERVAL = 2000L // 2 seconds
 
+    @Volatile
     private var isCooldownActive = false
+    private val cooldownHandler = Handler(Looper.getMainLooper())
+    private var cooldownRunnable: Runnable? = null
+    private val COOLDOWN_PERIOD = 2000L
+
+    private fun startCooldown() {
+        isCooldownActive = true
+        cooldownRunnable?.let { cooldownHandler.removeCallbacks(it) }
+
+        // Create a new cooldown runnable
+        cooldownRunnable = Runnable {
+            isCooldownActive = false
+        }
+
+        // Post the cooldown runnable with delay
+        cooldownHandler.postDelayed(cooldownRunnable!!, COOLDOWN_PERIOD)
+    }
 
     // For recipe selection
     private var currentRecipeIndex = 0
@@ -65,7 +83,16 @@ class RecipeListFragment : Fragment(), GestureRecognizerHelper.GestureRecognizer
         private const val CAMERA_PERMISSION_REQUEST_CODE = 1001
         private val RECOGNIZED_GESTURES = setOf("Thumb_Up", "Thumb_Down", "Open_Palm")
     }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
+        requireActivity().onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                activity?.finish()
+                System.exit(0)
+            }
+        })
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
@@ -223,6 +250,7 @@ class RecipeListFragment : Fragment(), GestureRecognizerHelper.GestureRecognizer
         isGestureRecognitionInProgress = false
         isCooldownActive = false
         _binding = null
+        cooldownRunnable?.let { cooldownHandler.removeCallbacks(it) }
     }
 
     override fun onError(error: String, errorCode: Int) {
@@ -328,7 +356,6 @@ class RecipeListFragment : Fragment(), GestureRecognizerHelper.GestureRecognizer
 
     private fun performGestureAction(gestureName: String) {
         isGestureRecognitionInProgress = false
-        isCooldownActive = true
 
         // Animate the progress bar to fill quickly
         val progressAnimator = ObjectAnimator.ofInt(
@@ -341,7 +368,9 @@ class RecipeListFragment : Fragment(), GestureRecognizerHelper.GestureRecognizer
         progressAnimator.start()
 
         // Change progress bar color to indicate success
-        setProgressBarColor(Color.BLUE)
+        setProgressBarColor(Color.parseColor("#008000"))
+
+        startCooldown()
 
         // Display the action name
         val actionName = getActionName(gestureName)
@@ -397,8 +426,7 @@ class RecipeListFragment : Fragment(), GestureRecognizerHelper.GestureRecognizer
 
             // After performing the action, reset gesture recognition
             resetGestureRecognition()
-            isCooldownActive = false
-        }, 1000) // Delay of 1 second
+        }, 1000)
     }
 
     private fun resetGestureRecognition() {

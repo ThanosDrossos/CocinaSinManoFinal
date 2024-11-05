@@ -13,6 +13,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.camera.core.AspectRatio
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageAnalysis
@@ -54,7 +55,24 @@ class RecipeOverviewFragment : Fragment(), GestureRecognizerHelper.GestureRecogn
     private val gestureTimestamps = mutableListOf<Pair<Long, String>>()
     private val GESTURE_RECOGNITION_INTERVAL = 2000L // 2 seconds
 
+    @Volatile
     private var isCooldownActive = false
+    private val cooldownHandler = Handler(Looper.getMainLooper())
+    private var cooldownRunnable: Runnable? = null
+    private val COOLDOWN_PERIOD = 3000L // 3 seconds
+
+    private fun startCooldown() {
+        isCooldownActive = true
+        cooldownRunnable?.let { cooldownHandler.removeCallbacks(it) }
+
+        // Create a new cooldown runnable
+        cooldownRunnable = Runnable {
+            isCooldownActive = false
+        }
+
+        // Post the cooldown runnable with delay
+        cooldownHandler.postDelayed(cooldownRunnable!!, COOLDOWN_PERIOD)
+    }
 
     companion object {
         private const val TAG = "RecipeOverviewFragment"
@@ -62,6 +80,21 @@ class RecipeOverviewFragment : Fragment(), GestureRecognizerHelper.GestureRecogn
         private val RECOGNIZED_GESTURES = setOf("Open_Palm", "Closed_Fist")
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // Initialize recipe as early as possible
+        //recipe = arguments?.getParcelable("recipe") ?: throw IllegalArgumentException("Recipe not found")
+
+        // Handle back button
+        requireActivity().onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                // Navigate back to RecipeOverviewFragment with the recipe
+                val action = RecipeOverviewFragmentDirections.actionRecipeOverviewFragmentToRecipeListFragment()
+                findNavController().navigate(action)
+            }
+        })
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
@@ -78,6 +111,7 @@ class RecipeOverviewFragment : Fragment(), GestureRecognizerHelper.GestureRecogn
 
         // Set recipe title
         binding.recipeTitleTextView.text = recipe.title
+        binding.recipeDescriptionTextView.text = recipe.subtitle
 
         // Display ingredients
         binding.ingredientsTextView.text = recipe.ingredients.joinToString(separator = "\n") { "- $it" }
@@ -209,6 +243,7 @@ class RecipeOverviewFragment : Fragment(), GestureRecognizerHelper.GestureRecogn
         isGestureRecognitionInProgress = false
         isCooldownActive = false
         _binding = null
+        cooldownRunnable?.let { cooldownHandler.removeCallbacks(it) }
     }
 
     override fun onError(error: String, errorCode: Int) {
@@ -324,8 +359,10 @@ class RecipeOverviewFragment : Fragment(), GestureRecognizerHelper.GestureRecogn
         progressAnimator.duration = 300 // Animate quickly
         progressAnimator.start()
 
-        // Change progress bar color to indicate success
-        setProgressBarColor(Color.BLUE)
+        // Change progress bar color to dark green to indicate success
+        setProgressBarColor(Color.parseColor("#008000"))
+
+        startCooldown()
 
         // Display the action name
         val actionName = getActionName(gestureName)
@@ -357,8 +394,7 @@ class RecipeOverviewFragment : Fragment(), GestureRecognizerHelper.GestureRecogn
 
             // After performing the action, reset gesture recognition
             resetGestureRecognition()
-            isCooldownActive = false
-        }, 1000) // Delay of 1 second
+        }, 1000)
     }
 
     private fun resetGestureRecognition() {

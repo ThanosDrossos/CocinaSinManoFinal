@@ -18,6 +18,7 @@ class RecipeAdapter(
 
     inner class RecipeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val recipeNameTextView: TextView = itemView.findViewById(R.id.recipeNameTextView)
+        val recipeSubtitleTextView: TextView = itemView.findViewById(R.id.recipeSubtitleTextView)
         val recipeImageView: ImageView = itemView.findViewById(R.id.recipeImageView)
     }
 
@@ -39,6 +40,7 @@ class RecipeAdapter(
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
         val recipe = recipes[position]
         holder.recipeNameTextView.text = recipe.title
+        holder.recipeSubtitleTextView.text = recipe.subtitle
 
         Log.d("RecipeAdapter", "Binding recipe at position $position: ${recipe.title}")
 

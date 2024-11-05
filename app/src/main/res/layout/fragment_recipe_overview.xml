@@ -24,15 +24,6 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Back Button -->
-            <Button
-                android:id="@+id/backButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Atrás"
-                android:layout_gravity="start"
-                android:layout_marginBottom="16dp" />
-
             <!-- Recipe Title -->
             <TextView
                 android:id="@+id/recipeTitleTextView"
@@ -42,6 +33,25 @@
                 android:textSize="30sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="16dp" />
+
+            <!-- Description Label -->
+            <TextView
+                android:id="@+id/descriptionLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Description Text -->
+            <TextView
+                android:id="@+id/recipeDescriptionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="Lista de ingredientes"
+                android:layout_marginBottom="20dp" />
 
             <!-- Ingredients Label -->
             <TextView
@@ -57,6 +67,7 @@
             <TextView
                 android:id="@+id/ingredientsTextView"
                 android:layout_width="match_parent"
+                android:textSize="16dp"
                 android:layout_height="wrap_content"
                 android:text="Lista de ingredientes"
                 android:layout_marginBottom="20dp" />
@@ -75,18 +86,36 @@
             <TextView
                 android:id="@+id/stepsTextView"
                 android:layout_width="match_parent"
+                android:textSize="16dp"
                 android:layout_height="wrap_content"
                 android:text="Lista de pasos"
                 android:layout_marginBottom="20dp" />
 
-            <!-- Start Cooking Button -->
-            <Button
-                android:id="@+id/startCookingButton"
-                android:layout_width="wrap_content"
+            <!-- Buttons Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Empezar a Cocinar"
-                android:layout_alignParentBottom="true"
-                android:layout_gravity="center_horizontal" />
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <!-- Back Button -->
+                <Button
+                    android:id="@+id/backButton"
+                    android:layout_width="0dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Atrás ✊" />
+
+                <!-- Start Cooking Button -->
+                <Button
+                    android:id="@+id/startCookingButton"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Empezar a Cocinar 🖐" />
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -158,10 +187,10 @@
                 android:id="@+id/userGuidanceTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gestos:"
+                android:text="Gestos"
                 android:textStyle="bold"
                 android:textSize="20sp"
-                android:layout_marginBottom="4dp" />
+                android:layout_marginBottom="2dp" />
 
             <TextView
                 android:id="@+id/gestureInstructionsTextView"

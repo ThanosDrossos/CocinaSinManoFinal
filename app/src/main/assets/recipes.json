@@ -1,6 +1,7 @@
 [
     {
         "title": "Tortilla Española",
+        "subtitle": "Una deliciosa tortilla de huevos, patatas y cebolla, típica de la gastronomía española.",
         "ingredients": [
             "Huevos",
             "Patatas",
@@ -34,6 +35,7 @@
     },
     {
         "title": "Paella Valenciana",
+        "subtitle": "El plato emblemático de Valencia, una paella tradicional con pollo, conejo y verduras.",
         "ingredients": [
             "Arroz",
             "Pollo",
@@ -72,6 +74,7 @@
     },
     {
         "title": "Gazpacho Andaluz",
+        "subtitle": "Una refrescante sopa fría de tomate y verduras, ideal para los días calurosos.",
         "ingredients": [
             "Tomates maduros",
             "Pepino",
@@ -109,6 +112,7 @@
     },
     {
         "title": "Churros con Chocolate",
+        "subtitle": "Tradicionales churros crujientes acompañados de un rico chocolate caliente.",
         "ingredients": [
             "Harina de trigo",
             "Agua",
@@ -144,6 +148,7 @@
     },
     {
         "title": "Ensalada Mixta",
+        "subtitle": "Una ensalada fresca y variada con lechuga, tomate, cebolla, atún y huevo duro.",
         "ingredients": [
             "Lechuga",
             "Tomate",

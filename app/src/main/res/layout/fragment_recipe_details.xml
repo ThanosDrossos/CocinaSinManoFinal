@@ -184,7 +184,7 @@
                 android:text="Gestos"
                 android:textStyle="bold"
                 android:textSize="20sp"
-                android:layout_marginBottom="0dp" />
+                android:layout_marginBottom="2dp" />
 
             <TextView
                 android:id="@+id/gestureInstructionsTextView"

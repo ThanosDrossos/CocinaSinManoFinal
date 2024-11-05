@@ -59,7 +59,7 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
     private var isCooldownActive = false
     private val cooldownHandler = Handler(Looper.getMainLooper())
     private var cooldownRunnable: Runnable? = null
-    private val COOLDOWN_PERIOD = 2000L // 3 seconds
+    private val COOLDOWN_PERIOD = 1000L
 
     private fun startCooldown() {
         isCooldownActive = true
@@ -450,7 +450,7 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
 
             // After performing the action, reset gesture recognition
             resetGestureRecognition()
-        }, 10)
+        }, 1000)
     }
 
     private fun resetGestureRecognition() {

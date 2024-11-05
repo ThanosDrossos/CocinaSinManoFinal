@@ -426,7 +426,7 @@ class RecipeListFragment : Fragment(), GestureRecognizerHelper.GestureRecognizer
 
             // After performing the action, reset gesture recognition
             resetGestureRecognition()
-        }, 1000)
+        }, 10)
     }
 
     private fun resetGestureRecognition() {

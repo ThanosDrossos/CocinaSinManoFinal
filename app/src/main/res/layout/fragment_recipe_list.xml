@@ -38,7 +38,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintDimensionRatio="3:4" />
+            app:layout_constraintDimensionRatio="3:3" />
 
         <!-- Detected Gesture TextView -->
         <TextView
@@ -93,7 +93,7 @@
                 android:id="@+id/gestureInstructionsTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="👍 Siguiente receta\n👎 Receta anterior\n🖐 Seleccionar receta\n✊ Atrás"
+                android:text="👍 Siguiente receta\n👎 Receta anterior\n🖐 Seleccionar receta"
                 android:textSize="20sp"
                 android:gravity="center" />
 

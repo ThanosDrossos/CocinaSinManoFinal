@@ -5,53 +5,67 @@
     android:id="@+id/recipe_card"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="8dp"
     app:cardElevation="4dp"
     app:cardCornerRadius="8dp">
 
-    <!-- Horizontal LinearLayout to hold TextViews and ImageView -->
+    <!-- Container for the content -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp">
+        android:orientation="vertical">
 
-        <!-- Vertical LinearLayout for Title and Subtitle -->
+        <!-- Horizontal LinearLayout to hold TextViews and ImageView -->
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:padding="16dp">
 
-            <!-- TextView for Recipe Name -->
-            <TextView
-                android:id="@+id/recipeNameTextView"
-                android:layout_width="match_parent"
+            <!-- Vertical LinearLayout for Title and Subtitle -->
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Recipe Name"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:paddingEnd="8dp" />
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <!-- TextView for Recipe Subtitle -->
-            <TextView
-                android:id="@+id/recipeSubtitleTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Recipe Subtitle"
-                android:textSize="16sp"
-                android:paddingEnd="8dp" />
+                <!-- TextView for Recipe Name -->
+                <TextView
+                    android:id="@+id/recipeNameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Recipe Name"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:paddingEnd="8dp" />
+
+                <!-- TextView for Recipe Subtitle -->
+                <TextView
+                    android:id="@+id/recipeSubtitleTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Recipe Subtitle"
+                    android:textSize="16sp"
+                    android:paddingEnd="8dp" />
+
+            </LinearLayout>
+
+            <!-- ImageView for Recipe Image -->
+            <ImageView
+                android:id="@+id/recipeImageView"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/recipe_image" />
 
         </LinearLayout>
 
-        <!-- ImageView for Recipe Image -->
-        <ImageView
-            android:id="@+id/recipeImageView"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="fitCenter"
-            android:contentDescription="@string/recipe_image" />
-
+        <!-- Divider Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

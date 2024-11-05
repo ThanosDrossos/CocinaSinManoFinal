@@ -1,53 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/about_scroll_view"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:id="@+id/about_layout"
+        android:id="@+id/about_linear_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <!-- App Version -->
+        <!-- Existing TextViews -->
+        <TextView
+            android:id="@+id/appNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recetas Sin Toque"
+            android:textSize="20sp"
+            android:layout_marginBottom="8dp"/>
+
         <TextView
             android:id="@+id/appVersionTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Versión de la Aplicación: 1.0.0"
+            android:text="Versión de la Aplicación: 0.1.2"
             android:textSize="18sp"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"/>
 
-        <!-- Developer Information -->
         <TextView
             android:id="@+id/developerInfoTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Desarrollado por Thanos Drossos"
             android:textSize="18sp"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="16dp"/>
 
-        <!-- Privacy Policy -->
+        <!-- Confidence Parameters Section -->
         <TextView
-            android:id="@+id/privacyPolicyTextView"
+            android:id="@+id/confidenceParametersTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Política de Privacidad"
-            android:textSize="18sp"
-            android:textColor="@color/teal_200"
-            android:layout_marginBottom="8dp"
-            android:clickable="true"
-            android:focusable="true" />
+            android:text="Ajustar Parámetros de Confianza"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
 
-        <!-- Additional Information -->
+        <!-- Min Hand Presence Confidence -->
         <TextView
-            android:id="@+id/additionalInfoTextView"
+            android:id="@+id/minHandPresenceConfidenceLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Información adicional sobre la aplicación."
-            android:textSize="16sp" />
+            android:text="Confianza Mínima de Presencia de Mano"
+            android:textSize="16sp"/>
+
+        <SeekBar
+            android:id="@+id/minHandPresenceConfidenceSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="60"/>
+
+        <TextView
+            android:id="@+id/minHandPresenceConfidenceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.6"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Min Hand Detection Confidence -->
+        <TextView
+            android:id="@+id/minHandDetectionConfidenceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confianza Mínima de Detección de Mano"
+            android:textSize="16sp"/>
+
+        <SeekBar
+            android:id="@+id/minHandDetectionConfidenceSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="60"/>
+
+        <TextView
+            android:id="@+id/minHandDetectionConfidenceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.6"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Min Hand Tracking Confidence -->
+        <TextView
+            android:id="@+id/minHandTrackingConfidenceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confianza Mínima de Seguimiento de Mano"
+            android:textSize="16sp"/>
+
+        <SeekBar
+            android:id="@+id/minHandTrackingConfidenceSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="60"/>
+
+        <TextView
+            android:id="@+id/minHandTrackingConfidenceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.6"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/saveParametersButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar Parámetros"
+            android:layout_marginTop="16dp"/>
 
     </LinearLayout>
+
 </ScrollView>

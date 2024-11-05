@@ -25,6 +25,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.google.mediapipe.examples.gesturerecognizer.GestureRecognizerHelper
+import com.google.mediapipe.examples.gesturerecognizer.ParameterUtils
 import com.google.mediapipe.examples.gesturerecognizer.R
 import com.google.mediapipe.examples.gesturerecognizer.Recipe
 import com.google.mediapipe.examples.gesturerecognizer.databinding.FragmentRecipeDetailsBinding
@@ -48,14 +49,16 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
 
     // Gesture recognition variables
     private var isGestureRecognitionInProgress = false
-    private var gestureCountsFirstInterval = mutableMapOf<String, Int>()
-    private var gestureCountsLastInterval = mutableMapOf<String, Int>()
-    private var totalGestureCounts = mutableMapOf<String, Int>()
-    private val GESTURE_RECOGNITION_INTERVAL = 3000L // Changed from 5000L to 3000L
+    private var gestureProgress = 0
     private var startTime: Long = 0L
-    private var gestureRecognitionHandler: Handler? = null
+    private val gestureTimestamps = mutableListOf<Pair<Long, String>>()
+    private val GESTURE_RECOGNITION_INTERVAL = 2000L // 2 seconds
 
-    private val cooldownDuration = 1000L // 1 second in milliseconds
+    private var isCooldownActive = false
+
+    fun getCurrentRecipe(): Recipe {
+        return recipe
+    }
 
     companion object {
         private const val TAG = "RecipeDetailsFragment"
@@ -64,12 +67,6 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
     }
 
     private val args: RecipeDetailsFragmentArgs by navArgs()
-
-    private val gestureRecognitionRunnable = Runnable {
-        // This runs after 3 seconds
-        handleGestureAction()
-        resetGestureRecognition()
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -88,18 +85,16 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
         // Display the first step
         displayCurrentStep()
 
-        // Initialize GestureRecognizerHelper
+        val confidenceParameters = ParameterUtils.getConfidenceParameters(requireContext())
+
         gestureRecognizerHelper = GestureRecognizerHelper(
             context = requireContext(),
             gestureRecognizerListener = this,
             runningMode = RunningMode.LIVE_STREAM,
-            minHandPresenceConfidence = 0.6f,
-            minHandTrackingConfidence = 0.6f,
-            minHandDetectionConfidence = 0.6f
+            minHandPresenceConfidence = confidenceParameters.minHandPresenceConfidence,
+            minHandTrackingConfidence = confidenceParameters.minHandTrackingConfidence,
+            minHandDetectionConfidence = confidenceParameters.minHandDetectionConfidence
         )
-
-        // Initialize the gesture recognition handler
-        gestureRecognitionHandler = Handler(Looper.getMainLooper())
 
         isFragmentActive = true
 
@@ -245,12 +240,13 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
         isFragmentActive = false
         // Shut down our background executor
         cameraProvider?.unbindAll()
-        cameraExecutor.shutdownNow()
-        gestureRecognizerHelper.clearGestureRecognizer()
-        gestureRecognitionHandler?.removeCallbacksAndMessages(null)
-        gestureRecognitionHandler = null
         imageAnalyzer?.clearAnalyzer()
         imageAnalyzer = null
+        cameraExecutor.shutdownNow()
+        gestureRecognizerHelper.clearGestureRecognizer()
+        gestureTimestamps.clear()
+        isGestureRecognitionInProgress = false
+        isCooldownActive = false
         _binding = null
     }
 
@@ -265,108 +261,121 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
     }
 
     override fun onResults(resultBundle: GestureRecognizerHelper.ResultBundle) {
-        if (!isFragmentActive) return
+        if (!isFragmentActive || isCooldownActive) return
         val gestureResults = resultBundle.results.firstOrNull()
         val gestureClassifierResult = gestureResults?.gestures()?.firstOrNull()
         val category = gestureClassifierResult?.firstOrNull()
         val gestureName = category?.categoryName() ?: "None"
 
-        Log.d(TAG, "Gesto Reconocido: $gestureName")
+        val currentTime = System.currentTimeMillis()
+
+        // Update the gesture timestamps list
+        gestureTimestamps.add(Pair(currentTime, gestureName))
+
+        // Remove old entries beyond 2 seconds
+        gestureTimestamps.removeAll { it.first < currentTime - GESTURE_RECOGNITION_INTERVAL }
+
+        // Get the most recognized gesture in the last 100 ms
+        val mostRecognizedGesture = getMostRecognizedGestureInLast100ms(currentTime)
+
+        Log.d(TAG, "Gesto Reconocido: $mostRecognizedGesture")
 
         activity?.runOnUiThread {
-            if(_binding==null){
+            if (_binding == null) {
                 Log.d(TAG, "Binding is null")
                 return@runOnUiThread
             }
-            // Update the UI with the detected gesture
-            binding.detectedGestureTextView.text = "Gesto detectado: $gestureName"
 
-            // Only proceed if recognized gesture is in our set
-            if (gestureName in RECOGNIZED_GESTURES) {
-                // Handle gesture recognition logic
-                if (!isGestureRecognitionInProgress) {
-                    // Start gesture recognition
-                    isGestureRecognitionInProgress = true
-                    startTime = System.currentTimeMillis()
+            // Update the UI with the action name
+            val actionName = getActionName(mostRecognizedGesture)
+            binding.detectedGestureTextView.text = actionName
 
-                    // Initialize counts
-                    gestureCountsFirstInterval.clear()
-                    gestureCountsLastInterval.clear()
-                    totalGestureCounts.clear()
+            // Update progress bar
+            if (!isGestureRecognitionInProgress && mostRecognizedGesture in RECOGNIZED_GESTURES) {
+                // Start gesture recognition
+                isGestureRecognitionInProgress = true
+                startTime = currentTime
+                gestureProgress = 0
 
-                    // Start the 3-second timer
-                    gestureRecognitionHandler?.postDelayed(
-                        gestureRecognitionRunnable,
-                        GESTURE_RECOGNITION_INTERVAL
-                    )
+                // Initialize the progress bar
+                binding.gestureProgressBar.max = GESTURE_RECOGNITION_INTERVAL.toInt()
+                setProgressBarColor(Color.GREEN)
+            }
 
-                    // Update progress bar color to green
-                    setProgressBarColor(Color.GREEN)
-
-                    // Update progress bar
-                    binding.gestureProgressBar.max = GESTURE_RECOGNITION_INTERVAL.toInt()
-                    val progressAnimator = ObjectAnimator.ofInt(
-                        binding.gestureProgressBar,
-                        "progress",
-                        0,
-                        GESTURE_RECOGNITION_INTERVAL.toInt()
-                    )
-                    progressAnimator.duration = GESTURE_RECOGNITION_INTERVAL
-                    progressAnimator.start()
-                }
-
-                if (isGestureRecognitionInProgress) {
-                    // We are within the 3-second interval
-                    val elapsedTime = System.currentTimeMillis() - startTime
-
-                    // Update total gesture counts
-                    totalGestureCounts[gestureName] =
-                        totalGestureCounts.getOrDefault(gestureName, 0) + 1
-
-                    // Update counts for first 1 second and last 1 second
-                    if (elapsedTime <= 1000L) {
-                        // First 1 second
-                        gestureCountsFirstInterval[gestureName] =
-                            gestureCountsFirstInterval.getOrDefault(gestureName, 0) + 1
-                    } else if (elapsedTime >= 2000L) {
-                        // Last 1 second
-                        gestureCountsLastInterval[gestureName] =
-                            gestureCountsLastInterval.getOrDefault(gestureName, 0) + 1
+            if (isGestureRecognitionInProgress) {
+                if (mostRecognizedGesture in RECOGNIZED_GESTURES) {
+                    // Increase the progress
+                    gestureProgress += 100
+                    if (gestureProgress > GESTURE_RECOGNITION_INTERVAL) {
+                        gestureProgress = GESTURE_RECOGNITION_INTERVAL.toInt()
+                    }
+                } else if (mostRecognizedGesture == "None") {
+                    // Decrease the progress
+                    gestureProgress -= 100
+                    if (gestureProgress <= 0) {
+                        gestureProgress = 0
+                        resetGestureRecognition()
                     }
                 }
-            } else {
-                // If gesture is not recognized or "None", reset the progress bar color to grey
-                if (!isGestureRecognitionInProgress) {
-                    setProgressBarColor(Color.GRAY)
+                binding.gestureProgressBar.progress = gestureProgress
+
+                // If gesture is recognized sufficiently
+                if (gestureProgress >= GESTURE_RECOGNITION_INTERVAL / 2) {
+                    // Gesture recognized sufficiently
+                    performGestureAction(mostRecognizedGesture)
                 }
+            } else {
+                // If not in recognition progress, set progress bar color to grey
+                setProgressBarColor(Color.GRAY)
             }
         }
     }
 
-    private fun handleGestureAction() {
-        // Determine the gesture recognized most over the 3 seconds
-        val mostRecognizedGesture = totalGestureCounts.maxByOrNull { it.value }?.key ?: "None"
+    private fun getMostRecognizedGestureInLast100ms(currentTime: Long): String {
+        // Remove old entries beyond 100 ms
+        gestureTimestamps.removeAll { it.first < currentTime - 100 }
 
-        // Get counts for 'None' and the most recognized gesture
-        val noneCount = totalGestureCounts["None"] ?: 0
-        val maxGestureCount = totalGestureCounts[mostRecognizedGesture] ?: 0
+        // Count the occurrences
+        val counts = gestureTimestamps.groupingBy { it.second }.eachCount()
 
-        // If 'None' was recognized more than any other gesture, abort
-        if (mostRecognizedGesture == "None" || noneCount >= maxGestureCount) {
-            Toast.makeText(
-                requireContext(),
-                "Gesto no reconocido.",
-                Toast.LENGTH_SHORT
-            ).show()
-            return
+        // Return the gesture with the highest count
+        return counts.maxByOrNull { it.value }?.key ?: "None"
+    }
+
+    private fun getActionName(gestureName: String): String {
+        return when (gestureName) {
+            "Thumb_Up" -> "Siguiente paso"
+            "Thumb_Down" -> "Paso anterior"
+            "Closed_Fist" -> "Volver al resumen"
+            else -> "Gesto no reconocido"
         }
+    }
 
-        // Check if the most recognized gesture was detected at least 3 times in both intervals
-        val countFirstInterval = gestureCountsFirstInterval[mostRecognizedGesture] ?: 0
-        val countLastInterval = gestureCountsLastInterval[mostRecognizedGesture] ?: 0
+    private fun performGestureAction(gestureName: String) {
+        isGestureRecognitionInProgress = false
+        isCooldownActive = true
 
-        if (countFirstInterval >= 3 && countLastInterval >= 3) {
-            when (mostRecognizedGesture) {
+        // Animate the progress bar to fill quickly
+        val progressAnimator = ObjectAnimator.ofInt(
+            binding.gestureProgressBar,
+            "progress",
+            gestureProgress,
+            GESTURE_RECOGNITION_INTERVAL.toInt()
+        )
+        progressAnimator.duration = 300 // Animate quickly
+        progressAnimator.start()
+
+        // Change progress bar color to indicate success
+        setProgressBarColor(Color.BLUE)
+
+        // Display the action name
+        val actionName = getActionName(gestureName)
+        binding.detectedGestureTextView.text = actionName
+
+        // Delay performing the action by 1 second
+        Handler(Looper.getMainLooper()).postDelayed({
+            // Perform the action corresponding to the gesture
+            when (gestureName) {
                 "Thumb_Up" -> {
                     // Move to next step
                     if (currentStepIndex < recipe.steps.size - 1) {
@@ -406,22 +415,18 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
                     ).show()
                 }
             }
-        } else {
-            // Not enough gestures detected in both intervals
-            Toast.makeText(
-                requireContext(),
-                "Gesto reconocido muy pocas veces. Intenta de nuevo.",
-                Toast.LENGTH_SHORT
-            ).show()
-        }
+
+            // After performing the action, reset gesture recognition
+            resetGestureRecognition()
+            isCooldownActive = false
+        }, 1000) // Delay of 1 second
     }
 
     private fun resetGestureRecognition() {
         isGestureRecognitionInProgress = false
         startTime = 0L
-        gestureCountsFirstInterval.clear()
-        gestureCountsLastInterval.clear()
-        totalGestureCounts.clear()
+        gestureTimestamps.clear()
+        gestureProgress = 0
 
         // Reset progress bar and detected gesture text
         binding.gestureProgressBar.progress = 0

@@ -78,4 +78,18 @@
         android:id="@+id/aboutFragment"
         android:name="com.google.mediapipe.examples.gesturerecognizer.fragment.AboutFragment"
         android:label="Acerca de" />
+
+    <!-- Global Actions -->
+
+    <!-- Global action to RecipeListFragment -->
+    <action
+        android:id="@+id/action_global_recipeListFragment"
+        app:destination="@id/recipeListFragment" />
+
+    <!-- Global action to AboutFragment -->
+    <action
+        android:id="@+id/action_global_aboutFragment"
+        app:destination="@id/aboutFragment" />
+
+
 </navigation>

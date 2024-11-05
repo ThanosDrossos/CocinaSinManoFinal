@@ -5,13 +5,15 @@ import com.google.mediapipe.examples.gesturerecognizer.fragment.AboutFragment
 
 object ParameterUtils {
 
-    data class ConfidenceParameters(
+    data class GestureParameters(
         val minHandPresenceConfidence: Float,
         val minHandDetectionConfidence: Float,
-        val minHandTrackingConfidence: Float
+        val minHandTrackingConfidence: Float,
+        val cooldownPeriod: Long,
+        val gestureRecognitionInterval: Long
     )
 
-    fun getConfidenceParameters(context: Context): ConfidenceParameters {
+    fun getGestureParameters(context: Context): GestureParameters {
         val sharedPreferences = context.getSharedPreferences(
             AboutFragment.SHARED_PREFS_NAME,
             Context.MODE_PRIVATE
@@ -29,11 +31,21 @@ object ParameterUtils {
             AboutFragment.MIN_HAND_TRACKING_CONFIDENCE_KEY,
             0.6f
         )
+        val cooldownPeriod = sharedPreferences.getLong(
+            AboutFragment.COOLDOWN_PERIOD_KEY,
+            1000L
+        )
+        val gestureRecognitionInterval = sharedPreferences.getLong(
+            AboutFragment.GESTURE_RECOGNITION_INTERVAL_KEY,
+            2000L
+        )
 
-        return ConfidenceParameters(
+        return GestureParameters(
             minHandPresenceConfidence,
             minHandDetectionConfidence,
-            minHandTrackingConfidence
+            minHandTrackingConfidence,
+            cooldownPeriod,
+            gestureRecognitionInterval
         )
     }
 }

@@ -66,7 +66,7 @@
             android:id="@+id/minHandPresenceConfidenceValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0.6"
+            android:text="0.60"
             android:textSize="16sp"
             android:layout_marginBottom="16dp"/>
 
@@ -89,7 +89,7 @@
             android:id="@+id/minHandDetectionConfidenceValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0.6"
+            android:text="0.60"
             android:textSize="16sp"
             android:layout_marginBottom="16dp"/>
 
@@ -112,7 +112,64 @@
             android:id="@+id/minHandTrackingConfidenceValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0.6"
+            android:text="0.60"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- New Gesture Parameters Section -->
+        <TextView
+            android:id="@+id/gestureParametersTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ajustar Parámetros de Gestos"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Cooldown Period -->
+        <TextView
+            android:id="@+id/cooldownPeriodLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Período de Enfriamiento (ms)"
+            android:textSize="16sp"/>
+
+        <SeekBar
+            android:id="@+id/cooldownPeriodSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="50"
+            android:progress="10"/>
+
+        <TextView
+            android:id="@+id/cooldownPeriodValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000ms"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Gesture Recognition Interval -->
+        <TextView
+            android:id="@+id/gestureRecognitionIntervalLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intervalo de Reconocimiento de Gestos (ms)"
+            android:textSize="16sp"/>
+
+        <SeekBar
+            android:id="@+id/gestureRecognitionIntervalSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="50"
+            android:progress="20"/>
+
+        <TextView
+            android:id="@+id/gestureRecognitionIntervalValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2000ms"
             android:textSize="16sp"
             android:layout_marginBottom="16dp"/>
 

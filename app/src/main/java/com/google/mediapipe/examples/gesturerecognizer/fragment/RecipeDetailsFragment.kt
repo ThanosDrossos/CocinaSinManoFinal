@@ -53,13 +53,13 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
     private var gestureProgress = 0
     private var startTime: Long = 0L
     private val gestureTimestamps = mutableListOf<Pair<Long, String>>()
-    private val GESTURE_RECOGNITION_INTERVAL = 2000L // 2 seconds
+    private var gestureRecognitionInterval : Long = 2000L
+    private var cooldownPeriod : Long = 1000L
 
     @Volatile
     private var isCooldownActive = false
     private val cooldownHandler = Handler(Looper.getMainLooper())
     private var cooldownRunnable: Runnable? = null
-    private val COOLDOWN_PERIOD = 1000L
 
     private fun startCooldown() {
         isCooldownActive = true
@@ -71,7 +71,7 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
         }
 
         // Post the cooldown runnable with delay
-        cooldownHandler.postDelayed(cooldownRunnable!!, COOLDOWN_PERIOD)
+        cooldownHandler.postDelayed(cooldownRunnable!!, cooldownPeriod )
     }
 
     companion object {
@@ -115,16 +115,19 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
         // Display the first step
         displayCurrentStep()
 
-        val confidenceParameters = ParameterUtils.getConfidenceParameters(requireContext())
+        val gestureParameters = ParameterUtils.getGestureParameters(requireContext())
 
         gestureRecognizerHelper = GestureRecognizerHelper(
             context = requireContext(),
             gestureRecognizerListener = this,
             runningMode = RunningMode.LIVE_STREAM,
-            minHandPresenceConfidence = confidenceParameters.minHandPresenceConfidence,
-            minHandTrackingConfidence = confidenceParameters.minHandTrackingConfidence,
-            minHandDetectionConfidence = confidenceParameters.minHandDetectionConfidence
+            minHandPresenceConfidence = gestureParameters.minHandPresenceConfidence,
+            minHandTrackingConfidence = gestureParameters.minHandTrackingConfidence,
+            minHandDetectionConfidence = gestureParameters.minHandDetectionConfidence
         )
+
+        cooldownPeriod = gestureParameters.cooldownPeriod
+        gestureRecognitionInterval = gestureParameters.gestureRecognitionInterval
 
         isFragmentActive = true
 
@@ -304,7 +307,7 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
         gestureTimestamps.add(Pair(currentTime, gestureName))
 
         // Remove old entries beyond 2 seconds
-        gestureTimestamps.removeAll { it.first < currentTime - GESTURE_RECOGNITION_INTERVAL }
+        gestureTimestamps.removeAll { it.first < currentTime - gestureRecognitionInterval }
 
         // Get the most recognized gesture in the last 100 ms
         val mostRecognizedGesture = getMostRecognizedGestureInLast100ms(currentTime)
@@ -329,7 +332,7 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
                 gestureProgress = 0
 
                 // Initialize the progress bar
-                binding.gestureProgressBar.max = GESTURE_RECOGNITION_INTERVAL.toInt()
+                binding.gestureProgressBar.max = gestureRecognitionInterval.toInt()
                 setProgressBarColor(Color.GREEN)
             }
 
@@ -337,8 +340,8 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
                 if (mostRecognizedGesture in RECOGNIZED_GESTURES) {
                     // Increase the progress
                     gestureProgress += 100
-                    if (gestureProgress > GESTURE_RECOGNITION_INTERVAL) {
-                        gestureProgress = GESTURE_RECOGNITION_INTERVAL.toInt()
+                    if (gestureProgress > gestureRecognitionInterval) {
+                        gestureProgress = gestureRecognitionInterval.toInt()
                     }
                 } else if (mostRecognizedGesture == "None") {
                     // Decrease the progress
@@ -351,7 +354,7 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
                 binding.gestureProgressBar.progress = gestureProgress
 
                 // If gesture is recognized sufficiently
-                if (gestureProgress >= GESTURE_RECOGNITION_INTERVAL / 2) {
+                if (gestureProgress >= gestureRecognitionInterval / 2) {
                     // Gesture recognized sufficiently
                     performGestureAction(mostRecognizedGesture)
                 }
@@ -390,7 +393,7 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
             binding.gestureProgressBar,
             "progress",
             gestureProgress,
-            GESTURE_RECOGNITION_INTERVAL.toInt()
+            gestureRecognitionInterval.toInt()
         )
         progressAnimator.duration = 300 // Animate quickly
         progressAnimator.start()

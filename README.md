@@ -138,9 +138,8 @@ La aplicación permite ajustar varios parámetros para personalizar el comportam
    git checkout -b feature/AmazingFeature
 3. **Realiza Commit de tus Cambios**
    ```bash
-git commit -m 'Add some AmazingFeature'
+   git commit -m 'Add some AmazingFeature'
     ```
-    
 4. Haz Push a la Rama
     ```bash
     git push origin feature/AmazingFeature

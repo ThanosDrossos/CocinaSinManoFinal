@@ -260,6 +260,7 @@ class RecipeOverviewFragment : Fragment(), GestureRecognizerHelper.GestureRecogn
     }
 
     override fun onResults(resultBundle: GestureRecognizerHelper.ResultBundle) {
+        if (_binding == null) return
         if (!isFragmentActive || isCooldownActive) return
         val gestureResults = resultBundle.results.firstOrNull()
         val gestureClassifierResult = gestureResults?.gestures()?.firstOrNull()
@@ -349,6 +350,7 @@ class RecipeOverviewFragment : Fragment(), GestureRecognizerHelper.GestureRecogn
     }
 
     private fun performGestureAction(gestureName: String) {
+        if (_binding == null) return
         isGestureRecognitionInProgress = false
         isCooldownActive = true
 
@@ -397,7 +399,7 @@ class RecipeOverviewFragment : Fragment(), GestureRecognizerHelper.GestureRecogn
 
             // After performing the action, reset gesture recognition
             resetGestureRecognition()
-        }, 1000)
+        }, cooldownPeriod)
     }
 
     private fun resetGestureRecognition() {
@@ -413,6 +415,7 @@ class RecipeOverviewFragment : Fragment(), GestureRecognizerHelper.GestureRecogn
     }
 
     private fun setProgressBarColor(color: Int) {
+        if (_binding == null) return
         val drawable = binding.gestureProgressBar.progressDrawable
         drawable?.let {
             DrawableCompat.setTint(it, color)

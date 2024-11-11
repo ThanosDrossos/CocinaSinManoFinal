@@ -111,6 +111,44 @@
         "imagePath": "images/gazpacho_andaluz.jpg"
     },
     {
+        "title": "Ensalada de Frutas",
+        "subtitle": "Una ensalada refrescante y saludable con una variedad de frutas frescas.",
+        "ingredients": [
+            "Fresas",
+            "Plátano",
+            "Manzana",
+            "Mango",
+            "Uvas",
+            "Kiwi",
+            "Miel (opcional)",
+            "Jugo de limón (opcional)",
+            "Granola"
+        ],
+        "steps": [
+            {
+                "description": "Lava todas las frutas de la receta.",
+                "imagePath": "images/fruitsalad_step0.jpg"
+            },
+            {
+                "description": "Corta todas las frutas en trozos pequeños.",
+                "imagePath": "images/fruitsalad_step1.jpg"
+            },
+            {
+                "description": "Coloca las frutas en un bol grande y mezcla suavemente.",
+                "imagePath": "images/fruitsalad_step2.jpg"
+            },
+            {
+                "description": "Agrega una cucharadita de miel y un poco de jugo de limón para resaltar los sabores, si lo deseas.",
+                "imagePath": "images/fruitsalad_step3.jpg"
+            },
+            {
+                "description": "Antes de servir, añade granola al gusto para darle un toque crujiente.",
+                "imagePath": "images/fruitsalad_step4.jpg"
+            }
+        ],
+        "imagePath": "images/ensalada_de_frutas.jpg"
+    },
+    {
         "title": "Churros con Chocolate",
         "subtitle": "Tradicionales churros crujientes acompañados de un rico chocolate caliente.",
         "ingredients": [

@@ -161,6 +161,7 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
     }
 
     private fun displayCurrentStep() {
+        if (_binding == null) return
         val currentStep = recipe.steps[currentStepIndex]
 
         // Set step description
@@ -178,6 +179,7 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
     }
 
     private fun updateNavigationArrows() {
+        if (_binding == null) return
         val enabledColor = ContextCompat.getColor(requireContext(), R.color.black)
         val disabledColor = ContextCompat.getColor(requireContext(), R.color.gray)
 
@@ -295,6 +297,7 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
     }
 
     override fun onResults(resultBundle: GestureRecognizerHelper.ResultBundle) {
+        if (_binding == null) return
         if (!isFragmentActive || isCooldownActive) return
         val gestureResults = resultBundle.results.firstOrNull()
         val gestureClassifierResult = gestureResults?.gestures()?.firstOrNull()
@@ -387,6 +390,7 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
 
     private fun performGestureAction(gestureName: String) {
         isGestureRecognitionInProgress = false
+        if (_binding == null) return
 
         // Animate the progress bar to fill quickly
         val progressAnimator = ObjectAnimator.ofInt(
@@ -453,7 +457,7 @@ class RecipeDetailsFragment : Fragment(), GestureRecognizerHelper.GestureRecogni
 
             // After performing the action, reset gesture recognition
             resetGestureRecognition()
-        }, 1000)
+        }, cooldownPeriod)
     }
 
     private fun resetGestureRecognition() {

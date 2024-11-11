@@ -165,6 +165,7 @@ class RecipeListFragment : Fragment(), GestureRecognizerHelper.GestureRecognizer
     }
 
     private fun selectRecipeAtIndex(index: Int) {
+        if (_binding == null) return
         if (index in recipes.indices) {
             currentRecipeIndex = index
             recipeAdapter.setSelectedPosition(currentRecipeIndex)
@@ -267,6 +268,7 @@ class RecipeListFragment : Fragment(), GestureRecognizerHelper.GestureRecognizer
     }
 
     override fun onResults(resultBundle: GestureRecognizerHelper.ResultBundle) {
+        if (_binding == null) return
         if (!isFragmentActive || isCooldownActive) return
         val gestureResults = resultBundle.results.firstOrNull()
         val gestureClassifierResult = gestureResults?.gestures()?.firstOrNull()
@@ -358,6 +360,7 @@ class RecipeListFragment : Fragment(), GestureRecognizerHelper.GestureRecognizer
     }
 
     private fun performGestureAction(gestureName: String) {
+        if (_binding == null) return
         isGestureRecognitionInProgress = false
 
         // Animate the progress bar to fill quickly
@@ -429,7 +432,7 @@ class RecipeListFragment : Fragment(), GestureRecognizerHelper.GestureRecognizer
 
             // After performing the action, reset gesture recognition
             resetGestureRecognition()
-        }, 1000)
+        }, cooldownPeriod)
     }
 
     private fun resetGestureRecognition() {

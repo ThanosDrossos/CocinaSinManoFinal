@@ -8,7 +8,6 @@
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
 .DS_Store
-/build
 /captures
 .externalNativeBuild
 .cxx
@@ -16,6 +15,5 @@ local.properties
 *.wav
 
 # Project exclude paths
-/app/build/
 /app/build/intermediates/javac/debug/classes/
 /app/build/intermediates/javac/debugAndroidTest/classes/

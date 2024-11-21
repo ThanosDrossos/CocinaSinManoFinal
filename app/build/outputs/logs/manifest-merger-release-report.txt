@@ -1,0 +1,552 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:17:1-56:12
+INJECTED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:17:1-56:12
+INJECTED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:17:1-56:12
+INJECTED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:17:1-56:12
+MERGED from [androidx.databinding:viewbinding:8.6.0] C:\Users\thano\.gradle\caches\transforms-4\ffc8e7528b6b2b7758d8b0d856c19f2d\transformed\viewbinding-8.6.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\4f98ef933482646c6bdfcfd2ae7a1754\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\213fdf88557e964740e1a69e70efcd53\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\04599d6605dbae15e3c11aa754c8ed8a\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\33297dd211140be611ef510c58a1b095\transformed\firebase-common-21.0.0\AndroidManifest.xml:15:1-41:12
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\994d0c47cc18d82cc5f4346ff998f7d2\transformed\navigation-fragment-ktx-2.5.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-fragment:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\fd08f3bae74a372c525a6eb9cb2210c1\transformed\navigation-fragment-2.5.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\b555f59ee79a4cc9577a0a3afd9059c4\transformed\slidingpanelayout-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window:1.1.0-alpha03] C:\Users\thano\.gradle\caches\transforms-4\03ab683ce1b68d8025a48e8b9462e62c\transformed\window-1.1.0-alpha03\AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.fragment:fragment-ktx:1.5.4] C:\Users\thano\.gradle\caches\transforms-4\9a604428458fc1b4b456e30c6c38f97b\transformed\fragment-ktx-1.5.4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-ui-ktx:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\aa0457c39abfadfe7ca931fc6b4158c9\transformed\navigation-ui-ktx-2.5.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\42e3dd0c4cf9acfd935a7461acf473df\transformed\navigation-runtime-ktx-2.5.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-ui:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\bcfaeb30ab20bb45373d41ee62f39372\transformed\navigation-ui-2.5.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\8a4474cd33089dd58687c3a2fca30e32\transformed\navigation-runtime-2.5.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-ktx:1.5.1] C:\Users\thano\.gradle\caches\transforms-4\1b4940e3b99441356521a8fd5d4fb539\transformed\activity-ktx-1.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\2076928983d13b5659c413a04ba7ad0c\transformed\navigation-common-ktx-2.5.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\969240f69c48fb2857b919f1792fa639\transformed\navigation-common-2.5.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\05b75b8c6e41961348f51b25dcb20df9\transformed\lifecycle-viewmodel-ktx-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.7.0] C:\Users\thano\.gradle\caches\transforms-4\80242383060820565396906ab57ae396\transformed\material-1.7.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\thano\.gradle\caches\transforms-4\931279986d29dbb1bc3edbdd86d5e894\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.camera:camera-view:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\9a54956a7b8a88fb6c0761a4b213c092\transformed\camera-view-1.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\thano\.gradle\caches\transforms-4\cb480698e525a306e2be6ffefdfe38c8\transformed\appcompat-resources-1.5.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.5.1] C:\Users\thano\.gradle\caches\transforms-4\a6d6f1489f98bd8343c22ccfa055aee1\transformed\appcompat-1.5.1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.15.1] C:\Users\thano\.gradle\caches\transforms-4\863ce7635f5c785cf839c7f5801d150e\transformed\glide-4.15.1\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\2df449ff5b927c227f59db3362141628\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\thano\.gradle\caches\transforms-4\9508ee1df58fc407e63ec3bf36618d47\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:15:1-25:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\thano\.gradle\caches\transforms-4\304127c2b128afb29203069d98351798\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\thano\.gradle\caches\transforms-4\c6b05aa906affeb4f670b5f8e3e80653\transformed\play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\thano\.gradle\caches\transforms-4\6f18646d936e689388bb0763bf4073da\transformed\firebase-auth-interop-19.0.2\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\thano\.gradle\caches\transforms-4\74d2cadf964caf637685c016e2f56612\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\thano\.gradle\caches\transforms-4\864ea8180bfb4bf59615b811409626ba\transformed\play-services-basement-18.3.0\AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\thano\.gradle\caches\transforms-4\db40c27ae51236f392c45cfde8a0dd38\transformed\fragment-1.5.4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.5.1] C:\Users\thano\.gradle\caches\transforms-4\af6a0fe7480ac8fb34ade4830fb4b1b3\transformed\activity-1.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\e002b1f69d47c91cadc6a697d75d89be\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\ce46301039ed926e2312e46e0e81680b\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\73d8a926b22811b4c4dc462dc37d6adb\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\552823566757cdf770aa083667c2d3c6\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\f8451c2baddf0f26e77180ebc27cace6\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\d28ea97e4c8204fe8d9a16be89c86768\transformed\lifecycle-runtime-ktx-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.8.0] C:\Users\thano\.gradle\caches\transforms-4\84df01a6c6ab46d1fa9e6aa1d60cbf32\transformed\core-ktx-1.8.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.camera:camera-camera2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\347ea8a0bad6c656307e089b53750fe2\transformed\camera-camera2-1.2.0\AndroidManifest.xml:17:1-36:12
+MERGED from [androidx.camera:camera-lifecycle:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\741add5f56c6aa01295d5bc646ab6aa9\transformed\camera-lifecycle-1.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.camera:camera-core:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\bd62287f34a0478a07f1ceb1ef14ff93\transformed\camera-core-1.2.0\AndroidManifest.xml:17:1-36:12
+MERGED from [com.google.mediapipe:tasks-vision:0.10.14] C:\Users\thano\.gradle\caches\transforms-4\c28b7a336e38a7afc95287298b713198\transformed\tasks-vision-0.10.14\AndroidManifest.xml:2:1-9:12
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\thano\.gradle\caches\transforms-4\6c2e2336c95d3d267600c5e77c7bc089\transformed\grpc-android-1.62.2\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\6dce339185160b952f9de7d05a0737f5\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\3bfe507c35b991c2d95498349070a024\transformed\emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\thano\.gradle\caches\transforms-4\92f6ae9636fb3e3482fbdc539543ad15\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\thano\.gradle\caches\transforms-4\2a26ac3c25860dc26ee6a82f1da639ee\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\thano\.gradle\caches\transforms-4\0029997dcbdc47a55d3301679d5807bc\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\thano\.gradle\caches\transforms-4\95615ed769ebc2f2658ec65a944fed93\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\thano\.gradle\caches\transforms-4\6b8cbce284747b9bb68d80fe9355adfd\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\70b13d8f42665619a429529fee7ad16f\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\thano\.gradle\caches\transforms-4\1c5db2e3487e45fddb17346e96b9333f\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.4.1] C:\Users\thano\.gradle\caches\transforms-4\0dfcef74a799d43d052d5ac4a516460e\transformed\transition-1.4.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.8.0] C:\Users\thano\.gradle\caches\transforms-4\5821ea6580186dc251ec7590674828d9\transformed\core-1.8.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\0880f20849679d10c031a46399034ac6\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\thano\.gradle\caches\transforms-4\20c325c37e99f68420b8ba994c2d02bd\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\eab63ef3663c3ebc54592bb71e16dfc6\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\2c0909e6e86ffd9882973571116965f4\transformed\savedstate-ktx-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\420cba40760101192046c5cb6c9d80cc\transformed\savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\df8e331235611786291e4851ca5d2025\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\thano\.gradle\caches\transforms-4\b8287465f71fc70c741ea8442a96e130\transformed\firebase-components-18.0.0\AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\thano\.gradle\caches\transforms-4\39d8559342b572aeaaa53d39e4796394\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\thano\.gradle\caches\transforms-4\95b51a98777e516287fdfd8e0d0abc04\transformed\exifinterface-1.3.3\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] C:\Users\thano\.gradle\caches\transforms-4\5bdbdaa9ffe5f945dc04b64b8ec1e3bb\transformed\gifdecoder-4.15.1\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\thano\.gradle\caches\transforms-4\6aea4d2c42b891a3bbc893ff2bc08946\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\4bad07f549f34fb5e123b441c7eea769\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\8412affd825b777f9b0a27f8c724093e\transformed\lifecycle-livedata-core-ktx-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\thano\.gradle\caches\transforms-4\5dcca660684c3801d5638eecf6618cce\transformed\lifecycle-livedata-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\14362119e6ccdc110ab33a98ed8d92b1\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\thano\.gradle\caches\transforms-4\7cb81fed4d2d03d0565aeef66c24a79b\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.mediapipe:tasks-core:0.10.14] C:\Users\thano\.gradle\caches\transforms-4\50f6bc99a80b819515b03e846ec8e91a\transformed\tasks-core-0.10.14\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\5886e92a1eb2956c51b8891be8866077\transformed\transport-backend-cct-3.1.0\AndroidManifest.xml:15:1-38:12
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\d851f98a78169ca441220621b89b51dc\transformed\transport-runtime-3.1.0\AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\thano\.gradle\caches\transforms-4\eec6efb1e62f3b6274f22ca1470b8fd3\transformed\transport-api-3.0.0\AndroidManifest.xml:15:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\7923905fe64455eb45b9696987b67cc4\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\55c6f7770915f2a3fec3b8a21c887375\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\640ebdf1b8b51b1bbcde12a31bdbee93\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\4e865abfe7edb7babd01ee8fc7f1e274\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\thano\.gradle\caches\transforms-4\8546fe6b16a66d304ec461e3f42aafc0\transformed\firebase-encoders-json-18.0.0\AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\thano\.gradle\caches\transforms-4\18a030d536c8325cb15d6487bf8d1d86\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\thano\.gradle\caches\transforms-4\4cb30f3b16c8d14e702bf7806a1878b2\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
+	package
+		INJECTED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:19:5-51
+	xmlns:dist
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:18:5-61
+	android:versionCode
+		INJECTED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:17:11-69
+dist:module
+ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:22:5-40
+	dist:instant
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:22:18-37
+uses-feature#android.hardware.camera
+ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:25:5-60
+	android:name
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:25:19-57
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:28:5-65
+	android:name
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:28:22-62
+application
+ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:30:5-54:19
+INJECTED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:30:5-54:19
+MERGED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\4f98ef933482646c6bdfcfd2ae7a1754\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\4f98ef933482646c6bdfcfd2ae7a1754\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\213fdf88557e964740e1a69e70efcd53\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\213fdf88557e964740e1a69e70efcd53\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\04599d6605dbae15e3c11aa754c8ed8a\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\04599d6605dbae15e3c11aa754c8ed8a\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\33297dd211140be611ef510c58a1b095\transformed\firebase-common-21.0.0\AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\33297dd211140be611ef510c58a1b095\transformed\firebase-common-21.0.0\AndroidManifest.xml:22:5-39:19
+MERGED from [androidx.window:window:1.1.0-alpha03] C:\Users\thano\.gradle\caches\transforms-4\03ab683ce1b68d8025a48e8b9462e62c\transformed\window-1.1.0-alpha03\AndroidManifest.xml:22:5-29:19
+MERGED from [androidx.window:window:1.1.0-alpha03] C:\Users\thano\.gradle\caches\transforms-4\03ab683ce1b68d8025a48e8b9462e62c\transformed\window-1.1.0-alpha03\AndroidManifest.xml:22:5-29:19
+MERGED from [com.google.android.material:material:1.7.0] C:\Users\thano\.gradle\caches\transforms-4\80242383060820565396906ab57ae396\transformed\material-1.7.0\AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.material:material:1.7.0] C:\Users\thano\.gradle\caches\transforms-4\80242383060820565396906ab57ae396\transformed\material-1.7.0\AndroidManifest.xml:24:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\thano\.gradle\caches\transforms-4\931279986d29dbb1bc3edbdd86d5e894\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\thano\.gradle\caches\transforms-4\931279986d29dbb1bc3edbdd86d5e894\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.15.1] C:\Users\thano\.gradle\caches\transforms-4\863ce7635f5c785cf839c7f5801d150e\transformed\glide-4.15.1\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.15.1] C:\Users\thano\.gradle\caches\transforms-4\863ce7635f5c785cf839c7f5801d150e\transformed\glide-4.15.1\AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\thano\.gradle\caches\transforms-4\9508ee1df58fc407e63ec3bf36618d47\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:23:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\thano\.gradle\caches\transforms-4\9508ee1df58fc407e63ec3bf36618d47\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:23:5-20
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\thano\.gradle\caches\transforms-4\c6b05aa906affeb4f670b5f8e3e80653\transformed\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\thano\.gradle\caches\transforms-4\c6b05aa906affeb4f670b5f8e3e80653\transformed\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\thano\.gradle\caches\transforms-4\6f18646d936e689388bb0763bf4073da\transformed\firebase-auth-interop-19.0.2\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\thano\.gradle\caches\transforms-4\6f18646d936e689388bb0763bf4073da\transformed\firebase-auth-interop-19.0.2\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\thano\.gradle\caches\transforms-4\74d2cadf964caf637685c016e2f56612\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\thano\.gradle\caches\transforms-4\74d2cadf964caf637685c016e2f56612\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\thano\.gradle\caches\transforms-4\864ea8180bfb4bf59615b811409626ba\transformed\play-services-basement-18.3.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\thano\.gradle\caches\transforms-4\864ea8180bfb4bf59615b811409626ba\transformed\play-services-basement-18.3.0\AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.camera:camera-camera2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\347ea8a0bad6c656307e089b53750fe2\transformed\camera-camera2-1.2.0\AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-camera2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\347ea8a0bad6c656307e089b53750fe2\transformed\camera-camera2-1.2.0\AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-core:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\bd62287f34a0478a07f1ceb1ef14ff93\transformed\camera-core-1.2.0\AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.camera:camera-core:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\bd62287f34a0478a07f1ceb1ef14ff93\transformed\camera-core-1.2.0\AndroidManifest.xml:23:5-34:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\3bfe507c35b991c2d95498349070a024\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\3bfe507c35b991c2d95498349070a024\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.8.0] C:\Users\thano\.gradle\caches\transforms-4\5821ea6580186dc251ec7590674828d9\transformed\core-1.8.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.8.0] C:\Users\thano\.gradle\caches\transforms-4\5821ea6580186dc251ec7590674828d9\transformed\core-1.8.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\thano\.gradle\caches\transforms-4\20c325c37e99f68420b8ba994c2d02bd\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\thano\.gradle\caches\transforms-4\20c325c37e99f68420b8ba994c2d02bd\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\thano\.gradle\caches\transforms-4\39d8559342b572aeaaa53d39e4796394\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\thano\.gradle\caches\transforms-4\39d8559342b572aeaaa53d39e4796394\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] C:\Users\thano\.gradle\caches\transforms-4\5bdbdaa9ffe5f945dc04b64b8ec1e3bb\transformed\gifdecoder-4.15.1\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] C:\Users\thano\.gradle\caches\transforms-4\5bdbdaa9ffe5f945dc04b64b8ec1e3bb\transformed\gifdecoder-4.15.1\AndroidManifest.xml:9:5-20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\thano\.gradle\caches\transforms-4\6aea4d2c42b891a3bbc893ff2bc08946\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\thano\.gradle\caches\transforms-4\6aea4d2c42b891a3bbc893ff2bc08946\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\5886e92a1eb2956c51b8891be8866077\transformed\transport-backend-cct-3.1.0\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\5886e92a1eb2956c51b8891be8866077\transformed\transport-backend-cct-3.1.0\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\d851f98a78169ca441220621b89b51dc\transformed\transport-runtime-3.1.0\AndroidManifest.xml:25:5-39:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\d851f98a78169ca441220621b89b51dc\transformed\transport-runtime-3.1.0\AndroidManifest.xml:25:5-39:19
+	android:extractNativeLibs
+		INJECTED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.8.0] C:\Users\thano\.gradle\caches\transforms-4\5821ea6580186dc251ec7590674828d9\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:35:9-35
+	android:label
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:33:9-41
+	tools:ignore
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:38:9-35
+	android:roundIcon
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:34:9-54
+	android:icon
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:32:9-43
+	android:allowBackup
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:31:9-35
+	android:theme
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:37:9-55
+	android:taskAffinity
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:36:9-32
+activity#com.google.mediapipe.examples.gesturerecognizer.MainActivity
+ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:40:9-53:20
+	android:exported
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:42:13-36
+	android:name
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:41:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:43:13-47:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:44:17-69
+	android:name
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:44:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:46:17-77
+	android:name
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:46:27-74
+meta-data#android.notch_support
+ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:50:13-52:40
+	android:value
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:52:17-37
+	android:name
+		ADDED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml:51:17-53
+uses-sdk
+INJECTED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml
+MERGED from [androidx.databinding:viewbinding:8.6.0] C:\Users\thano\.gradle\caches\transforms-4\ffc8e7528b6b2b7758d8b0d856c19f2d\transformed\viewbinding-8.6.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.6.0] C:\Users\thano\.gradle\caches\transforms-4\ffc8e7528b6b2b7758d8b0d856c19f2d\transformed\viewbinding-8.6.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\4f98ef933482646c6bdfcfd2ae7a1754\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\4f98ef933482646c6bdfcfd2ae7a1754\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\213fdf88557e964740e1a69e70efcd53\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\213fdf88557e964740e1a69e70efcd53\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\04599d6605dbae15e3c11aa754c8ed8a\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\04599d6605dbae15e3c11aa754c8ed8a\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\33297dd211140be611ef510c58a1b095\transformed\firebase-common-21.0.0\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\33297dd211140be611ef510c58a1b095\transformed\firebase-common-21.0.0\AndroidManifest.xml:19:5-44
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\994d0c47cc18d82cc5f4346ff998f7d2\transformed\navigation-fragment-ktx-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\994d0c47cc18d82cc5f4346ff998f7d2\transformed\navigation-fragment-ktx-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\fd08f3bae74a372c525a6eb9cb2210c1\transformed\navigation-fragment-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\fd08f3bae74a372c525a6eb9cb2210c1\transformed\navigation-fragment-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\b555f59ee79a4cc9577a0a3afd9059c4\transformed\slidingpanelayout-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\b555f59ee79a4cc9577a0a3afd9059c4\transformed\slidingpanelayout-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.1.0-alpha03] C:\Users\thano\.gradle\caches\transforms-4\03ab683ce1b68d8025a48e8b9462e62c\transformed\window-1.1.0-alpha03\AndroidManifest.xml:20:5-44
+MERGED from [androidx.window:window:1.1.0-alpha03] C:\Users\thano\.gradle\caches\transforms-4\03ab683ce1b68d8025a48e8b9462e62c\transformed\window-1.1.0-alpha03\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.5.4] C:\Users\thano\.gradle\caches\transforms-4\9a604428458fc1b4b456e30c6c38f97b\transformed\fragment-ktx-1.5.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.5.4] C:\Users\thano\.gradle\caches\transforms-4\9a604428458fc1b4b456e30c6c38f97b\transformed\fragment-ktx-1.5.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui-ktx:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\aa0457c39abfadfe7ca931fc6b4158c9\transformed\navigation-ui-ktx-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui-ktx:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\aa0457c39abfadfe7ca931fc6b4158c9\transformed\navigation-ui-ktx-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\42e3dd0c4cf9acfd935a7461acf473df\transformed\navigation-runtime-ktx-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\42e3dd0c4cf9acfd935a7461acf473df\transformed\navigation-runtime-ktx-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\bcfaeb30ab20bb45373d41ee62f39372\transformed\navigation-ui-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\bcfaeb30ab20bb45373d41ee62f39372\transformed\navigation-ui-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\8a4474cd33089dd58687c3a2fca30e32\transformed\navigation-runtime-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\8a4474cd33089dd58687c3a2fca30e32\transformed\navigation-runtime-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.5.1] C:\Users\thano\.gradle\caches\transforms-4\1b4940e3b99441356521a8fd5d4fb539\transformed\activity-ktx-1.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.5.1] C:\Users\thano\.gradle\caches\transforms-4\1b4940e3b99441356521a8fd5d4fb539\transformed\activity-ktx-1.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\2076928983d13b5659c413a04ba7ad0c\transformed\navigation-common-ktx-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\2076928983d13b5659c413a04ba7ad0c\transformed\navigation-common-ktx-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\969240f69c48fb2857b919f1792fa639\transformed\navigation-common-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.5.3] C:\Users\thano\.gradle\caches\transforms-4\969240f69c48fb2857b919f1792fa639\transformed\navigation-common-2.5.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\05b75b8c6e41961348f51b25dcb20df9\transformed\lifecycle-viewmodel-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\05b75b8c6e41961348f51b25dcb20df9\transformed\lifecycle-viewmodel-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.7.0] C:\Users\thano\.gradle\caches\transforms-4\80242383060820565396906ab57ae396\transformed\material-1.7.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.7.0] C:\Users\thano\.gradle\caches\transforms-4\80242383060820565396906ab57ae396\transformed\material-1.7.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\thano\.gradle\caches\transforms-4\931279986d29dbb1bc3edbdd86d5e894\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\thano\.gradle\caches\transforms-4\931279986d29dbb1bc3edbdd86d5e894\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.camera:camera-view:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\9a54956a7b8a88fb6c0761a4b213c092\transformed\camera-view-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.camera:camera-view:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\9a54956a7b8a88fb6c0761a4b213c092\transformed\camera-view-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\thano\.gradle\caches\transforms-4\cb480698e525a306e2be6ffefdfe38c8\transformed\appcompat-resources-1.5.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] C:\Users\thano\.gradle\caches\transforms-4\cb480698e525a306e2be6ffefdfe38c8\transformed\appcompat-resources-1.5.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.5.1] C:\Users\thano\.gradle\caches\transforms-4\a6d6f1489f98bd8343c22ccfa055aee1\transformed\appcompat-1.5.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.5.1] C:\Users\thano\.gradle\caches\transforms-4\a6d6f1489f98bd8343c22ccfa055aee1\transformed\appcompat-1.5.1\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.15.1] C:\Users\thano\.gradle\caches\transforms-4\863ce7635f5c785cf839c7f5801d150e\transformed\glide-4.15.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.15.1] C:\Users\thano\.gradle\caches\transforms-4\863ce7635f5c785cf839c7f5801d150e\transformed\glide-4.15.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\2df449ff5b927c227f59db3362141628\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\2df449ff5b927c227f59db3362141628\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\thano\.gradle\caches\transforms-4\9508ee1df58fc407e63ec3bf36618d47\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\thano\.gradle\caches\transforms-4\9508ee1df58fc407e63ec3bf36618d47\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\thano\.gradle\caches\transforms-4\304127c2b128afb29203069d98351798\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\thano\.gradle\caches\transforms-4\304127c2b128afb29203069d98351798\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\thano\.gradle\caches\transforms-4\c6b05aa906affeb4f670b5f8e3e80653\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\thano\.gradle\caches\transforms-4\c6b05aa906affeb4f670b5f8e3e80653\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\thano\.gradle\caches\transforms-4\6f18646d936e689388bb0763bf4073da\transformed\firebase-auth-interop-19.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\thano\.gradle\caches\transforms-4\6f18646d936e689388bb0763bf4073da\transformed\firebase-auth-interop-19.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\thano\.gradle\caches\transforms-4\74d2cadf964caf637685c016e2f56612\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\thano\.gradle\caches\transforms-4\74d2cadf964caf637685c016e2f56612\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\thano\.gradle\caches\transforms-4\864ea8180bfb4bf59615b811409626ba\transformed\play-services-basement-18.3.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\thano\.gradle\caches\transforms-4\864ea8180bfb4bf59615b811409626ba\transformed\play-services-basement-18.3.0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\thano\.gradle\caches\transforms-4\db40c27ae51236f392c45cfde8a0dd38\transformed\fragment-1.5.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.4] C:\Users\thano\.gradle\caches\transforms-4\db40c27ae51236f392c45cfde8a0dd38\transformed\fragment-1.5.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.5.1] C:\Users\thano\.gradle\caches\transforms-4\af6a0fe7480ac8fb34ade4830fb4b1b3\transformed\activity-1.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.5.1] C:\Users\thano\.gradle\caches\transforms-4\af6a0fe7480ac8fb34ade4830fb4b1b3\transformed\activity-1.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\e002b1f69d47c91cadc6a697d75d89be\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\e002b1f69d47c91cadc6a697d75d89be\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\ce46301039ed926e2312e46e0e81680b\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\ce46301039ed926e2312e46e0e81680b\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\73d8a926b22811b4c4dc462dc37d6adb\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\73d8a926b22811b4c4dc462dc37d6adb\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\552823566757cdf770aa083667c2d3c6\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\552823566757cdf770aa083667c2d3c6\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\f8451c2baddf0f26e77180ebc27cace6\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\f8451c2baddf0f26e77180ebc27cace6\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\d28ea97e4c8204fe8d9a16be89c86768\transformed\lifecycle-runtime-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\d28ea97e4c8204fe8d9a16be89c86768\transformed\lifecycle-runtime-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.8.0] C:\Users\thano\.gradle\caches\transforms-4\84df01a6c6ab46d1fa9e6aa1d60cbf32\transformed\core-ktx-1.8.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.8.0] C:\Users\thano\.gradle\caches\transforms-4\84df01a6c6ab46d1fa9e6aa1d60cbf32\transformed\core-ktx-1.8.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.camera:camera-camera2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\347ea8a0bad6c656307e089b53750fe2\transformed\camera-camera2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-camera2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\347ea8a0bad6c656307e089b53750fe2\transformed\camera-camera2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-lifecycle:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\741add5f56c6aa01295d5bc646ab6aa9\transformed\camera-lifecycle-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.camera:camera-lifecycle:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\741add5f56c6aa01295d5bc646ab6aa9\transformed\camera-lifecycle-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.camera:camera-core:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\bd62287f34a0478a07f1ceb1ef14ff93\transformed\camera-core-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-core:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\bd62287f34a0478a07f1ceb1ef14ff93\transformed\camera-core-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [com.google.mediapipe:tasks-vision:0.10.14] C:\Users\thano\.gradle\caches\transforms-4\c28b7a336e38a7afc95287298b713198\transformed\tasks-vision-0.10.14\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.mediapipe:tasks-vision:0.10.14] C:\Users\thano\.gradle\caches\transforms-4\c28b7a336e38a7afc95287298b713198\transformed\tasks-vision-0.10.14\AndroidManifest.xml:5:5-7:41
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\thano\.gradle\caches\transforms-4\6c2e2336c95d3d267600c5e77c7bc089\transformed\grpc-android-1.62.2\AndroidManifest.xml:5:5-44
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\thano\.gradle\caches\transforms-4\6c2e2336c95d3d267600c5e77c7bc089\transformed\grpc-android-1.62.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\6dce339185160b952f9de7d05a0737f5\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\6dce339185160b952f9de7d05a0737f5\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\3bfe507c35b991c2d95498349070a024\transformed\emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\3bfe507c35b991c2d95498349070a024\transformed\emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\thano\.gradle\caches\transforms-4\92f6ae9636fb3e3482fbdc539543ad15\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\thano\.gradle\caches\transforms-4\92f6ae9636fb3e3482fbdc539543ad15\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\thano\.gradle\caches\transforms-4\2a26ac3c25860dc26ee6a82f1da639ee\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\thano\.gradle\caches\transforms-4\2a26ac3c25860dc26ee6a82f1da639ee\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\thano\.gradle\caches\transforms-4\0029997dcbdc47a55d3301679d5807bc\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\thano\.gradle\caches\transforms-4\0029997dcbdc47a55d3301679d5807bc\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\thano\.gradle\caches\transforms-4\95615ed769ebc2f2658ec65a944fed93\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\thano\.gradle\caches\transforms-4\95615ed769ebc2f2658ec65a944fed93\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\thano\.gradle\caches\transforms-4\6b8cbce284747b9bb68d80fe9355adfd\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\thano\.gradle\caches\transforms-4\6b8cbce284747b9bb68d80fe9355adfd\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\70b13d8f42665619a429529fee7ad16f\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\70b13d8f42665619a429529fee7ad16f\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\thano\.gradle\caches\transforms-4\1c5db2e3487e45fddb17346e96b9333f\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\thano\.gradle\caches\transforms-4\1c5db2e3487e45fddb17346e96b9333f\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] C:\Users\thano\.gradle\caches\transforms-4\0dfcef74a799d43d052d5ac4a516460e\transformed\transition-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] C:\Users\thano\.gradle\caches\transforms-4\0dfcef74a799d43d052d5ac4a516460e\transformed\transition-1.4.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.8.0] C:\Users\thano\.gradle\caches\transforms-4\5821ea6580186dc251ec7590674828d9\transformed\core-1.8.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.8.0] C:\Users\thano\.gradle\caches\transforms-4\5821ea6580186dc251ec7590674828d9\transformed\core-1.8.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\0880f20849679d10c031a46399034ac6\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\0880f20849679d10c031a46399034ac6\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\thano\.gradle\caches\transforms-4\20c325c37e99f68420b8ba994c2d02bd\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\thano\.gradle\caches\transforms-4\20c325c37e99f68420b8ba994c2d02bd\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\eab63ef3663c3ebc54592bb71e16dfc6\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\eab63ef3663c3ebc54592bb71e16dfc6\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\2c0909e6e86ffd9882973571116965f4\transformed\savedstate-ktx-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\2c0909e6e86ffd9882973571116965f4\transformed\savedstate-ktx-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\420cba40760101192046c5cb6c9d80cc\transformed\savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\420cba40760101192046c5cb6c9d80cc\transformed\savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\df8e331235611786291e4851ca5d2025\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\df8e331235611786291e4851ca5d2025\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\thano\.gradle\caches\transforms-4\b8287465f71fc70c741ea8442a96e130\transformed\firebase-components-18.0.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-components:18.0.0] C:\Users\thano\.gradle\caches\transforms-4\b8287465f71fc70c741ea8442a96e130\transformed\firebase-components-18.0.0\AndroidManifest.xml:18:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\thano\.gradle\caches\transforms-4\39d8559342b572aeaaa53d39e4796394\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\thano\.gradle\caches\transforms-4\39d8559342b572aeaaa53d39e4796394\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\thano\.gradle\caches\transforms-4\95b51a98777e516287fdfd8e0d0abc04\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\thano\.gradle\caches\transforms-4\95b51a98777e516287fdfd8e0d0abc04\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] C:\Users\thano\.gradle\caches\transforms-4\5bdbdaa9ffe5f945dc04b64b8ec1e3bb\transformed\gifdecoder-4.15.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] C:\Users\thano\.gradle\caches\transforms-4\5bdbdaa9ffe5f945dc04b64b8ec1e3bb\transformed\gifdecoder-4.15.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\thano\.gradle\caches\transforms-4\6aea4d2c42b891a3bbc893ff2bc08946\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\thano\.gradle\caches\transforms-4\6aea4d2c42b891a3bbc893ff2bc08946\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\4bad07f549f34fb5e123b441c7eea769\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\4bad07f549f34fb5e123b441c7eea769\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\8412affd825b777f9b0a27f8c724093e\transformed\lifecycle-livedata-core-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\8412affd825b777f9b0a27f8c724093e\transformed\lifecycle-livedata-core-ktx-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\thano\.gradle\caches\transforms-4\5dcca660684c3801d5638eecf6618cce\transformed\lifecycle-livedata-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.1.0] C:\Users\thano\.gradle\caches\transforms-4\5dcca660684c3801d5638eecf6618cce\transformed\lifecycle-livedata-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\14362119e6ccdc110ab33a98ed8d92b1\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\thano\.gradle\caches\transforms-4\14362119e6ccdc110ab33a98ed8d92b1\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\thano\.gradle\caches\transforms-4\7cb81fed4d2d03d0565aeef66c24a79b\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\thano\.gradle\caches\transforms-4\7cb81fed4d2d03d0565aeef66c24a79b\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.mediapipe:tasks-core:0.10.14] C:\Users\thano\.gradle\caches\transforms-4\50f6bc99a80b819515b03e846ec8e91a\transformed\tasks-core-0.10.14\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.mediapipe:tasks-core:0.10.14] C:\Users\thano\.gradle\caches\transforms-4\50f6bc99a80b819515b03e846ec8e91a\transformed\tasks-core-0.10.14\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\5886e92a1eb2956c51b8891be8866077\transformed\transport-backend-cct-3.1.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\5886e92a1eb2956c51b8891be8866077\transformed\transport-backend-cct-3.1.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\d851f98a78169ca441220621b89b51dc\transformed\transport-runtime-3.1.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\d851f98a78169ca441220621b89b51dc\transformed\transport-runtime-3.1.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\thano\.gradle\caches\transforms-4\eec6efb1e62f3b6274f22ca1470b8fd3\transformed\transport-api-3.0.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] C:\Users\thano\.gradle\caches\transforms-4\eec6efb1e62f3b6274f22ca1470b8fd3\transformed\transport-api-3.0.0\AndroidManifest.xml:18:5-20:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\7923905fe64455eb45b9696987b67cc4\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\7923905fe64455eb45b9696987b67cc4\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\55c6f7770915f2a3fec3b8a21c887375\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\55c6f7770915f2a3fec3b8a21c887375\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\640ebdf1b8b51b1bbcde12a31bdbee93\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\640ebdf1b8b51b1bbcde12a31bdbee93\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\4e865abfe7edb7babd01ee8fc7f1e274\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\thano\.gradle\caches\transforms-4\4e865abfe7edb7babd01ee8fc7f1e274\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\thano\.gradle\caches\transforms-4\8546fe6b16a66d304ec461e3f42aafc0\transformed\firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] C:\Users\thano\.gradle\caches\transforms-4\8546fe6b16a66d304ec461e3f42aafc0\transformed\firebase-encoders-json-18.0.0\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\thano\.gradle\caches\transforms-4\18a030d536c8325cb15d6487bf8d1d86\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\thano\.gradle\caches\transforms-4\18a030d536c8325cb15d6487bf8d1d86\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\thano\.gradle\caches\transforms-4\4cb30f3b16c8d14e702bf7806a1878b2\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\thano\.gradle\caches\transforms-4\4cb30f3b16c8d14e702bf7806a1878b2\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:7:5-9:41
+	android:targetSdkVersion
+		INJECTED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\thano\AndroidStudioProjects\cocina\mediapipe-samples\examples\gesture_recognizer\android\app\src\main\AndroidManifest.xml
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\4f98ef933482646c6bdfcfd2ae7a1754\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\213fdf88557e964740e1a69e70efcd53\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\213fdf88557e964740e1a69e70efcd53\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\04599d6605dbae15e3c11aa754c8ed8a\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\04599d6605dbae15e3c11aa754c8ed8a\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\33297dd211140be611ef510c58a1b095\transformed\firebase-common-21.0.0\AndroidManifest.xml:30:9-38:19
+MERGED from [com.google.firebase:firebase-common:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\33297dd211140be611ef510c58a1b095\transformed\firebase-common-21.0.0\AndroidManifest.xml:30:9-38:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\4f98ef933482646c6bdfcfd2ae7a1754\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:11:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\33297dd211140be611ef510c58a1b095\transformed\firebase-common-21.0.0\AndroidManifest.xml:34:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\33297dd211140be611ef510c58a1b095\transformed\firebase-common-21.0.0\AndroidManifest.xml:32:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\4f98ef933482646c6bdfcfd2ae7a1754\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:10:13-84
+meta-data#com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreLegacyRegistrar
+ADDED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\4f98ef933482646c6bdfcfd2ae7a1754\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\4f98ef933482646c6bdfcfd2ae7a1754\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore-ktx:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\4f98ef933482646c6bdfcfd2ae7a1754\transformed\firebase-firestore-ktx-25.1.0\AndroidManifest.xml:13:17-129
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\213fdf88557e964740e1a69e70efcd53\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:10:5-79
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\thano\.gradle\caches\transforms-4\6c2e2336c95d3d267600c5e77c7bc089\transformed\grpc-android-1.62.2\AndroidManifest.xml:7:5-79
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\thano\.gradle\caches\transforms-4\6c2e2336c95d3d267600c5e77c7bc089\transformed\grpc-android-1.62.2\AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\5886e92a1eb2956c51b8891be8866077\transformed\transport-backend-cct-3.1.0\AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\5886e92a1eb2956c51b8891be8866077\transformed\transport-backend-cct-3.1.0\AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\d851f98a78169ca441220621b89b51dc\transformed\transport-runtime-3.1.0\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\d851f98a78169ca441220621b89b51dc\transformed\transport-runtime-3.1.0\AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\213fdf88557e964740e1a69e70efcd53\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:10:22-76
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\213fdf88557e964740e1a69e70efcd53\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:11:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\5886e92a1eb2956c51b8891be8866077\transformed\transport-backend-cct-3.1.0\AndroidManifest.xml:26:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\5886e92a1eb2956c51b8891be8866077\transformed\transport-backend-cct-3.1.0\AndroidManifest.xml:26:5-67
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\213fdf88557e964740e1a69e70efcd53\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:11:22-64
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar
+ADDED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\213fdf88557e964740e1a69e70efcd53\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:17:13-19:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\213fdf88557e964740e1a69e70efcd53\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:19:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\213fdf88557e964740e1a69e70efcd53\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:18:17-122
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\213fdf88557e964740e1a69e70efcd53\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\213fdf88557e964740e1a69e70efcd53\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:25.1.0] C:\Users\thano\.gradle\caches\transforms-4\213fdf88557e964740e1a69e70efcd53\transformed\firebase-firestore-25.1.0\AndroidManifest.xml:21:17-111
+meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar
+ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\04599d6605dbae15e3c11aa754c8ed8a\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\04599d6605dbae15e3c11aa754c8ed8a\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\04599d6605dbae15e3c11aa754c8ed8a\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\33297dd211140be611ef510c58a1b095\transformed\firebase-common-21.0.0\AndroidManifest.xml:23:9-28:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\33297dd211140be611ef510c58a1b095\transformed\firebase-common-21.0.0\AndroidManifest.xml:25:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\33297dd211140be611ef510c58a1b095\transformed\firebase-common-21.0.0\AndroidManifest.xml:27:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\33297dd211140be611ef510c58a1b095\transformed\firebase-common-21.0.0\AndroidManifest.xml:26:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\33297dd211140be611ef510c58a1b095\transformed\firebase-common-21.0.0\AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\33297dd211140be611ef510c58a1b095\transformed\firebase-common-21.0.0\AndroidManifest.xml:24:13-77
+meta-data#com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar
+ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\33297dd211140be611ef510c58a1b095\transformed\firebase-common-21.0.0\AndroidManifest.xml:35:13-37:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\33297dd211140be611ef510c58a1b095\transformed\firebase-common-21.0.0\AndroidManifest.xml:37:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common:21.0.0] C:\Users\thano\.gradle\caches\transforms-4\33297dd211140be611ef510c58a1b095\transformed\firebase-common-21.0.0\AndroidManifest.xml:36:17-109
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.1.0-alpha03] C:\Users\thano\.gradle\caches\transforms-4\03ab683ce1b68d8025a48e8b9462e62c\transformed\window-1.1.0-alpha03\AndroidManifest.xml:23:9-25:40
+	android:required
+		ADDED from [androidx.window:window:1.1.0-alpha03] C:\Users\thano\.gradle\caches\transforms-4\03ab683ce1b68d8025a48e8b9462e62c\transformed\window-1.1.0-alpha03\AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from [androidx.window:window:1.1.0-alpha03] C:\Users\thano\.gradle\caches\transforms-4\03ab683ce1b68d8025a48e8b9462e62c\transformed\window-1.1.0-alpha03\AndroidManifest.xml:24:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.1.0-alpha03] C:\Users\thano\.gradle\caches\transforms-4\03ab683ce1b68d8025a48e8b9462e62c\transformed\window-1.1.0-alpha03\AndroidManifest.xml:26:9-28:40
+	android:required
+		ADDED from [androidx.window:window:1.1.0-alpha03] C:\Users\thano\.gradle\caches\transforms-4\03ab683ce1b68d8025a48e8b9462e62c\transformed\window-1.1.0-alpha03\AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from [androidx.window:window:1.1.0-alpha03] C:\Users\thano\.gradle\caches\transforms-4\03ab683ce1b68d8025a48e8b9462e62c\transformed\window-1.1.0-alpha03\AndroidManifest.xml:27:13-51
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\thano\.gradle\caches\transforms-4\c6b05aa906affeb4f670b5f8e3e80653\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\thano\.gradle\caches\transforms-4\c6b05aa906affeb4f670b5f8e3e80653\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\thano\.gradle\caches\transforms-4\c6b05aa906affeb4f670b5f8e3e80653\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\thano\.gradle\caches\transforms-4\c6b05aa906affeb4f670b5f8e3e80653\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\thano\.gradle\caches\transforms-4\864ea8180bfb4bf59615b811409626ba\transformed\play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\thano\.gradle\caches\transforms-4\864ea8180bfb4bf59615b811409626ba\transformed\play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\thano\.gradle\caches\transforms-4\864ea8180bfb4bf59615b811409626ba\transformed\play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
+service#androidx.camera.core.impl.MetadataHolderService
+ADDED from [androidx.camera:camera-camera2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\347ea8a0bad6c656307e089b53750fe2\transformed\camera-camera2-1.2.0\AndroidManifest.xml:24:9-33:19
+MERGED from [androidx.camera:camera-core:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\bd62287f34a0478a07f1ceb1ef14ff93\transformed\camera-core-1.2.0\AndroidManifest.xml:29:9-33:78
+MERGED from [androidx.camera:camera-core:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\bd62287f34a0478a07f1ceb1ef14ff93\transformed\camera-core-1.2.0\AndroidManifest.xml:29:9-33:78
+	tools:node
+		ADDED from [androidx.camera:camera-camera2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\347ea8a0bad6c656307e089b53750fe2\transformed\camera-camera2-1.2.0\AndroidManifest.xml:29:13-31
+	android:enabled
+		ADDED from [androidx.camera:camera-camera2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\347ea8a0bad6c656307e089b53750fe2\transformed\camera-camera2-1.2.0\AndroidManifest.xml:26:13-36
+	android:exported
+		ADDED from [androidx.camera:camera-camera2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\347ea8a0bad6c656307e089b53750fe2\transformed\camera-camera2-1.2.0\AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.camera:camera-camera2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\347ea8a0bad6c656307e089b53750fe2\transformed\camera-camera2-1.2.0\AndroidManifest.xml:28:13-75
+	android:name
+		ADDED from [androidx.camera:camera-camera2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\347ea8a0bad6c656307e089b53750fe2\transformed\camera-camera2-1.2.0\AndroidManifest.xml:25:13-75
+meta-data#androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER
+ADDED from [androidx.camera:camera-camera2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\347ea8a0bad6c656307e089b53750fe2\transformed\camera-camera2-1.2.0\AndroidManifest.xml:30:13-32:89
+	android:value
+		ADDED from [androidx.camera:camera-camera2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\347ea8a0bad6c656307e089b53750fe2\transformed\camera-camera2-1.2.0\AndroidManifest.xml:32:17-86
+	android:name
+		ADDED from [androidx.camera:camera-camera2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\347ea8a0bad6c656307e089b53750fe2\transformed\camera-camera2-1.2.0\AndroidManifest.xml:31:17-103
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\3bfe507c35b991c2d95498349070a024\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\thano\.gradle\caches\transforms-4\20c325c37e99f68420b8ba994c2d02bd\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\thano\.gradle\caches\transforms-4\20c325c37e99f68420b8ba994c2d02bd\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\thano\.gradle\caches\transforms-4\6aea4d2c42b891a3bbc893ff2bc08946\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\thano\.gradle\caches\transforms-4\6aea4d2c42b891a3bbc893ff2bc08946\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\3bfe507c35b991c2d95498349070a024\transformed\emoji2-1.2.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\3bfe507c35b991c2d95498349070a024\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\3bfe507c35b991c2d95498349070a024\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\3bfe507c35b991c2d95498349070a024\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\3bfe507c35b991c2d95498349070a024\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\3bfe507c35b991c2d95498349070a024\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\thano\.gradle\caches\transforms-4\3bfe507c35b991c2d95498349070a024\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\thano\.gradle\caches\transforms-4\20c325c37e99f68420b8ba994c2d02bd\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\thano\.gradle\caches\transforms-4\20c325c37e99f68420b8ba994c2d02bd\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\thano\.gradle\caches\transforms-4\20c325c37e99f68420b8ba994c2d02bd\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\5886e92a1eb2956c51b8891be8866077\transformed\transport-backend-cct-3.1.0\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\d851f98a78169ca441220621b89b51dc\transformed\transport-runtime-3.1.0\AndroidManifest.xml:36:9-38:40
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\d851f98a78169ca441220621b89b51dc\transformed\transport-runtime-3.1.0\AndroidManifest.xml:36:9-38:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\5886e92a1eb2956c51b8891be8866077\transformed\transport-backend-cct-3.1.0\AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\5886e92a1eb2956c51b8891be8866077\transformed\transport-backend-cct-3.1.0\AndroidManifest.xml:30:13-103
+meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\5886e92a1eb2956c51b8891be8866077\transformed\transport-backend-cct-3.1.0\AndroidManifest.xml:32:13-34:39
+	android:value
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\5886e92a1eb2956c51b8891be8866077\transformed\transport-backend-cct-3.1.0\AndroidManifest.xml:34:17-36
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\5886e92a1eb2956c51b8891be8866077\transformed\transport-backend-cct-3.1.0\AndroidManifest.xml:33:17-94
+service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\d851f98a78169ca441220621b89b51dc\transformed\transport-runtime-3.1.0\AndroidManifest.xml:26:9-30:19
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\d851f98a78169ca441220621b89b51dc\transformed\transport-runtime-3.1.0\AndroidManifest.xml:28:13-37
+	android:permission
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\d851f98a78169ca441220621b89b51dc\transformed\transport-runtime-3.1.0\AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\d851f98a78169ca441220621b89b51dc\transformed\transport-runtime-3.1.0\AndroidManifest.xml:27:13-117
+receiver#com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\d851f98a78169ca441220621b89b51dc\transformed\transport-runtime-3.1.0\AndroidManifest.xml:32:9-34:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\d851f98a78169ca441220621b89b51dc\transformed\transport-runtime-3.1.0\AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.0] C:\Users\thano\.gradle\caches\transforms-4\d851f98a78169ca441220621b89b51dc\transformed\transport-runtime-3.1.0\AndroidManifest.xml:33:13-132

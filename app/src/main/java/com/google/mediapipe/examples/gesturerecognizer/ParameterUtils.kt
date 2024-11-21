@@ -37,7 +37,7 @@ object ParameterUtils {
         )
         val gestureRecognitionInterval = sharedPreferences.getLong(
             AboutFragment.GESTURE_RECOGNITION_INTERVAL_KEY,
-            2000L
+            4500L
         )
 
         return GestureParameters(
